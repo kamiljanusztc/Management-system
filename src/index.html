@@ -12,19 +12,9 @@
 </head>
 <body>
 
-  <section class="nav-bar container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-10">
-        <div>
-          <img class="col-md-2" src="images/icons/wallet.svg"/>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container-fluid">
-    <div class="row">
-      <div class="col-lg-2 col-md-2">
+      <div class="col-md-2">
         <div class="sidebar">
           <div class="sidebar__nav">
             <img class="sidebar__logo" src="images/sidebar/logo.png" alt="Just do it logo"/>
@@ -54,8 +44,31 @@
           </div>
         </div>
       </div>
+
+      <div class="col-md-12 container">
+        <div class="topbar">
+          <div class="topbar__container">
+            <div class="topbar__nav">
+              <img class="topbar__icon" src="images/icons/quit.svg" alt="quit"/>
+            </div>
+            <div class="topbar__nav">
+              <img class="topbar__icon" src="images/icons/profile.svg" alt="account"/>
+              <p>Leonardo Dicaprio</p>
+            </div>
+            <div class="topbar__nav">
+              <img class="topbar__icon" src="images/icons/notification.svg" alt="notification"/>
+              <span class="topbar__notification"></span>
+            </div>
+            <div class="topbar__nav">
+              <img class="topbar__icon" src="images/icons/wallet.svg" alt="wallet"/>
+              <h1 class="topbar__wallet-sum">$1,500.00</h1>
+              <img class="topbar__arrow" src="images/icons/arrow-down.svg" alt="arrow"/>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
 </body>
 </html>

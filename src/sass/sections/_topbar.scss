@@ -1,0 +1,76 @@
+.container {
+  background-color: $background-color;
+  width: 100vh;
+  height: 100vh;
+  left: 0;
+  margin-left: 0;
+  padding-left: 0;
+
+  .topbar {
+    background-color: $background-color;
+    color: $box-color;
+    width: 100%;
+    position: fixed;
+    left: 0;
+
+    .topbar__container {
+      display: flex;
+      align-items: center;
+      flex-flow: row-reverse;
+      background-color: $box-color;
+      height: 60px;
+      border: 1px solid #e3e3e3;
+
+      .topbar__nav {
+        padding: 20px 20px 0 20px;
+        border: 1px solid #e3e3e3;
+        background-color: $box-color;
+        height: 60px;
+
+        &:hover {
+          background-color: $background-color;
+          transition: $transition;
+          cursor: pointer;
+        }
+      }
+
+      .topbar__notification {
+        display: block;
+        background-color: #f58220;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: -3px 5px 20px -20px;
+        position: fixed;
+      }
+
+      .topbar__icon {
+        filter: invert(54%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(94%) contrast(92%);
+        //width: 18px;
+        height: 18px;
+        padding: 0 10px 0 10px;
+      }
+
+      .topbar__arrow {
+        filter: invert(54%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(94%) contrast(92%);
+        //width: 18px;
+        height: 10px;
+        padding: 0 10px 0 10px;
+      }
+
+      h1 {
+        display: inline;
+        font-size: 20px;
+      }
+
+      p {
+        display: inline;
+        color: #56819f;
+        position: relative;
+        top: -10%;
+      }
+    }
+  }
+}
+
