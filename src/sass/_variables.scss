@@ -24,34 +24,39 @@ $transition: all .3s;
 
 /* Global */
 
-.h1 {
+h1 {
   font-family: $font-header;
   font-size: 20px;
   font-weight: $font-regular;
+  color: $text-color;
 }
 
-.h2 {
+h2 {
   font-family: $font-header;
   font-size: 16px;
   font-weight: $font-bold;
+  color: $text-color;
 }
 
-.h3 {
+h3 {
   font-family: $font-header;
   font-size: 16px;
   font-weight: $font-medium;
   text-transform: uppercase;
+  color: $text-color;
 }
 
-.h4 {
+h4 {
   font-family: $font-header;
   font-size: 16px;
   font-weight: $font-light;
+  color: $text-color;
 }
 
-.p {
+p {
   font-family: $font-header;
   font-size: 14px;
   font-weight: $font-light;
+  color: $text-color;
 }
 
