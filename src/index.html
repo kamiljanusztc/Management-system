@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Management-service</title>
-  <link rel="stylesheet" href="vendor/bootstrap-grid.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -14,7 +13,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2">
+      <div>
         <div class="sidebar">
           <div class="sidebar__nav">
             <img class="sidebar__logo" src="images/sidebar/logo.png" alt="Just do it logo"/>
@@ -35,17 +34,17 @@
           </ul>
           <span class="sidebar__line"></span>
           <div class="sidebar__profile">
-            <h3>YOUR MANAGER</h3>
+            <h3 class="h3-title">YOUR MANAGER</h3>
             <div class="sidebar__profile-manager">
               <img src="images/sidebar/profilephoto.png" alt="Profile photo"/>
               <span class="sidebar__dot"></span>
-              <p>Mikhael E.</p>
+              <p class="paragraph">Mikhael E.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-12 container">
+      <div class="container-fluid topbar__section">
         <div class="topbar">
           <div class="topbar__container">
             <div class="topbar__nav">
@@ -53,7 +52,7 @@
             </div>
             <div class="topbar__nav">
               <img class="topbar__icon" src="images/icons/profile.svg" alt="account"/>
-              <p>Leonardo Dicaprio</p>
+              <p class="paragraph">Leonardo Dicaprio</p>
             </div>
             <div class="topbar__nav">
               <img class="topbar__icon" src="images/icons/notification.svg" alt="notification"/>
@@ -61,12 +60,62 @@
             </div>
             <div class="topbar__nav">
               <img class="topbar__icon" src="images/icons/wallet.svg" alt="wallet"/>
-              <h1 class="topbar__wallet-sum">$1,500.00</h1>
+              <h1 class="topbar__wallet-sum h1-title">$1,500.00</h1>
               <img class="topbar__arrow" src="images/icons/arrow-down.svg" alt="arrow"/>
             </div>
           </div>
         </div>
+
+        <div class="main">
+          <div class="main__section">
+            <h3 class="h3-title">General statistic</h3>
+            <span class="main__lines"></span>
+            <div class="main_callendar">
+              <div class="main__border-form calendar-items">
+                <p class="paragraph calendar-items">09.01.2021</p>
+                <span class="line-vertical calendar-items"></span>
+                <p class="paragraph calendar-items">09.01.2021</p>
+                <img class="main__icon" src="images/icons/calendar.svg" alt="calendar"/>
+              </div>
+              <div class="btn-refresh calendar-items">
+                <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
+              </div>
+            </div>
+            <span class="main__lines"></span>
+            <div class="main__diagram">
+              <div class="main__visit-signups">
+                <h2 class="h2-title">Visit Signups</h2>
+                <h4 class="h4-title">124</h4>
+                <span class="main__lines"></span>
+              </div>
+
+              <div class="main__earnings-chart">
+                <div class="main__tabs">
+                  <span class="main__circle"></span>
+                  <h4 class="h4-title">Signups</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main__section">
+            <h3 class="h3-title">Links</h3>
+            <span class="main__lines"></span>
+            <button>+add new</button>
+            <div class="main__links">
+              <div class="main__links-box">
+                <h2 class="h2-title">Home page</h2>
+                <h4 class="main__url">http://www.homepage.com</h4>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
+
+
+
     </div>
   </div>
 

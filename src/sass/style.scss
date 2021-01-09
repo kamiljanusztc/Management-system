@@ -4,11 +4,13 @@
 @import 'layout';
 
 /* Components */
-
+@import 'components/typography';
+@import 'components/elements';
+@import 'components/buttons';
 
 /* Sections */
-@import 'sections/content';
 @import 'sections/sidebar';
 @import 'sections/topbar';
+@import 'sections/main';
 
 /* Pages */

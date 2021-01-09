@@ -5,6 +5,12 @@ $box-color: #fff;
 $button-color: #f58220;
 $text-color: #818181;
 
+/* Shadow */
+$box-shadow: 0px 0px 28px -3px #d1d1d1;
+
+/* Border radius */
+$border-radius: 5px;
+
 /* Font sizes */
 $paragraph-font-size: 16px;
 
@@ -20,43 +26,6 @@ $font-bold: 700;
 /* Transitions */
 $transition: all .3s;
 
-/* Margins */
-
-/* Global */
-
-h1 {
-  font-family: $font-header;
-  font-size: 20px;
-  font-weight: $font-regular;
-  color: $text-color;
-}
-
-h2 {
-  font-family: $font-header;
-  font-size: 16px;
-  font-weight: $font-bold;
-  color: $text-color;
-}
-
-h3 {
-  font-family: $font-header;
-  font-size: 16px;
-  font-weight: $font-medium;
-  text-transform: uppercase;
-  color: $text-color;
-}
-
-h4 {
-  font-family: $font-header;
-  font-size: 16px;
-  font-weight: $font-light;
-  color: $text-color;
-}
-
-p {
-  font-family: $font-header;
-  font-size: 14px;
-  font-weight: $font-light;
-  color: $text-color;
-}
-
+/* Filters */
+$filter-white: invert(100%) sepia(0%) saturate(7500%) hue-rotate(257deg) brightness(117%) contrast(115%);
+$filter-gray: invert(54%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(94%) contrast(92%);

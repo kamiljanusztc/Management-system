@@ -1,0 +1,45 @@
+.main {
+  margin-left: 190px;
+  padding: 20px;
+
+  .main__section {
+    height: 100%;
+    background-color: $box-color;
+    box-shadow: $box-shadow;
+    padding: 1px 20px 20px 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+    .main__calendar {
+      display: flex;
+    }
+    .main__border-form {
+      width: 325px;
+      height: 40px;
+      margin: 20px;
+      border-radius: $border-radius;
+      padding: 0 15px 0 15px;
+    }
+
+    .calendar-items {
+      display: inline-block;
+    }
+
+    .line-vertical {
+      border-left: 2px solid #e3e3e3;
+      height: 28px;
+      margin: 0 10px -7px 10px;
+    }
+
+    .refresh-icon {
+      filter: $filter-white;
+    }
+
+    .main__icon {
+      filter: $filter-gray;
+      height: 13px;
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+

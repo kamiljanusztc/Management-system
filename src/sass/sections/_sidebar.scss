@@ -51,7 +51,7 @@
         }
 
         .sidebar__icon {
-          filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(257deg) brightness(117%) contrast(115%);
+          filter: $filter-white;
         }
       }
 
@@ -65,7 +65,7 @@
       }
 
       img {
-        filter: invert(54%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(94%) contrast(92%);
+        filter: $filter-gray;
         width: 15px;
         height: 12px;
         margin-right: 15px;

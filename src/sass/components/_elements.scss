@@ -1,0 +1,30 @@
+.main__lines {
+  display: block;
+  position: absolute;
+  background: #e3e3e3;
+  width: 1021px;
+  margin-left: -20px;
+  height: 1px;
+}
+
+.main__border-form {
+  border: 1px solid #e3e3e3;
+}
+
+.main__border-top-bottom {
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.main__border-bottom-small {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 15px;
+}
+
+// .form-box {
+//   width: 325px;
+//   height: 40px;
+//   margin: 20px;
+//   border-radius: $border-radius;
+//   padding: 0 15px 0 15px;
+// }

@@ -1,17 +1,12 @@
-.container {
+.topbar__section {
+  position: fixed;
+  right: 0;
   background-color: $background-color;
-  width: 100vh;
-  height: 100vh;
-  left: 0;
-  margin-left: 0;
-  padding-left: 0;
+  width: 100%;
 
   .topbar {
     background-color: $background-color;
     color: $box-color;
-    width: 100%;
-    position: fixed;
-    left: 0;
 
     .topbar__container {
       display: flex;
@@ -25,7 +20,7 @@
         padding: 20px 20px 0 20px;
         border: 1px solid #e3e3e3;
         background-color: $box-color;
-        height: 60px;
+        height: 40px;
 
         &:hover {
           background-color: $background-color;
@@ -46,14 +41,13 @@
       }
 
       .topbar__icon {
-        filter: invert(54%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(94%) contrast(92%);
-        //width: 18px;
+        filter: $filter-gray;
         height: 18px;
         padding: 0 10px 0 10px;
       }
 
       .topbar__arrow {
-        filter: invert(54%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(94%) contrast(92%);
+        filter: $filter-gray;
         //width: 18px;
         height: 10px;
         padding: 0 10px 0 10px;
@@ -61,7 +55,6 @@
 
       h1 {
         display: inline;
-        font-size: 20px;
       }
 
       p {
@@ -73,4 +66,3 @@
     }
   }
 }
-
