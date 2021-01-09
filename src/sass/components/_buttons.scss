@@ -1,9 +1,29 @@
 .btn-refresh {
+  position: relative;
   background-color: #f58220;
-  padding: 10px;
   border-radius: $border-radius;
   width: 40px;
   height: 40px;
+
+  .refresh-icon {
+    position: absolute;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: $filter-white;
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    background-color: #ffa200;
+    transition: $transition;
+    cursor: pointer;
+  }
 }
+
+
 
 

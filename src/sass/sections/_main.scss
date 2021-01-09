@@ -13,12 +13,18 @@
     .main__calendar {
       display: flex;
     }
+
     .main__border-form {
       width: 325px;
       height: 40px;
-      margin: 20px;
+      margin: 35px;
       border-radius: $border-radius;
-      padding: 0 15px 0 15px;
+      padding: 0 50px 0 50px;
+      vertical-align: middle;
+    }
+
+    .btn-refresh {
+      top: 15px;
     }
 
     .calendar-items {
@@ -31,15 +37,70 @@
       margin: 0 10px -7px 10px;
     }
 
-    .refresh-icon {
-      filter: $filter-white;
-    }
-
     .main__icon {
       filter: $filter-gray;
       height: 13px;
       padding: 0 10px 0 10px;
     }
+
+    .main__diagram{
+      width: 100%;
+      max-width: 100%;
+      margin: 15px;
+    }
+    .main__row{
+      margin: 0 auto;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .main__border-bottom {
+      padding-bottom: 5px;
+    }
+
+    .main__diagram-numbers {
+      position: relative;
+      width: 310px;
+      margin: 20px 60px 5px 30px;
+
+      .h2-title {
+        display: inline;
+      }
+
+      .h4-title {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+        display: inline;
+      }
+    }
+
+    .main__earnings-chart {
+
+      .main__tabs {
+        position: relative;
+
+        .tab {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: inline;
+
+          .diagram-photo {
+            width: 650px;
+            padding-top: 50px;
+
+          }
+        }
+      }
+
+    }
+
   }
 }
 
