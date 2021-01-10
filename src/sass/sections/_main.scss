@@ -8,23 +8,34 @@
     box-shadow: $box-shadow;
     padding: 1px 20px 20px 20px;
     margin-bottom: 20px;
-    position: relative;
+
+    .main__section-statistics {
+      position: relative;
+
+      .main__lines {
+        margin-top: 110px;
+      }
+    }
 
     .main__calendar {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
       display: flex;
     }
 
     .main__border-form {
       width: 325px;
       height: 40px;
-      margin: 35px;
+      margin: 35px 35px 35px -35px;
       border-radius: $border-radius;
-      padding: 0 50px 0 50px;
       vertical-align: middle;
     }
 
     .btn-refresh {
-      top: 15px;
+      margin: 35px 0 35px 0;
     }
 
     .calendar-items {
@@ -34,23 +45,33 @@
     .line-vertical {
       border-left: 2px solid #e3e3e3;
       height: 28px;
-      margin: 0 10px -7px 10px;
+      margin: 0 0 -7px 60px;
+    }
+
+    .data-start {
+      padding-left: 15px;
+    }
+
+    .data-stop {
+      padding-left: 10px;
     }
 
     .main__icon {
       filter: $filter-gray;
       height: 13px;
       padding: 0 10px 0 10px;
+      margin-left: 50px;
     }
 
-    .main__diagram{
+    .main__diagram {
       width: 100%;
       max-width: 100%;
       margin: 15px;
     }
-    .main__row{
-      margin: 0 auto;
-      display:flex;
+
+    .main__row {
+      margin-top: 140px;
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -73,32 +94,52 @@
         position: absolute;
         top: 50%;
         left: 100%;
-        transform: translate(-100%, -50%);
+        transform: translate(-100%, -70%);
         display: inline;
       }
     }
 
     .main__earnings-chart {
-
-      .main__tabs {
-        position: relative;
-
-        .tab {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: inline;
-
-          .diagram-photo {
-            width: 650px;
-            padding-top: 50px;
-
-          }
-        }
+      .h2-title {
+        margin: 70px 0 20px 120px;
       }
 
+      .main__tabs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tab {
+        position: relative;
+        margin: 20px;
+      }
+
+      .dot-orange, .dot-blue, .dot-green {
+        margin-top: 12px;
+      }
+
+      .h4-title {
+        display: inline;
+        margin: 0 0 5px 5px;
+      }
+
+      .diagram-photo {
+        width: 75%;
+        margin: 15px auto;
+      }
+    }
+
+    .main-links {
+      .main__border-top-bottom {
+        height: 60px;
+        width: 685px;
+      }
+    }
+
+    .main__url {
+      color: #56819f;
     }
 
   }

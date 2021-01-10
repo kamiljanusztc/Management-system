@@ -85,8 +85,9 @@
   .sidebar__profile {
     padding: 10px 0 0 15px;
 
-    h3 {
+    .h3-title {
       font-size: 14px;
+      color: $text-color;
     }
 
     .sidebar__profile-manager {
