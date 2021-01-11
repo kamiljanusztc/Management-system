@@ -65,6 +65,11 @@
     flex-wrap: wrap;
     justify-content: center;
 
+    .main__lines {
+      margin-bottom: 20px;
+      margin-top: -30px;
+    }
+
     .main__border-bottom {
       padding-bottom: 5px;
     }
@@ -126,16 +131,10 @@
 /* Links */
 
 .main__links-section {
-  position: relative;
-
   .btn-main {
     width: 125px;
     height: 40px;
-    margin: -30px 0 0 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 20px auto;
 
     .h4-title {
       font-size: 18px;
@@ -154,7 +153,7 @@
   }
 
   .links-wrapper {
-    padding-top: 100px;
+    // padding-top: 100px;
   }
 
   .main__border-top-bottom {
@@ -180,12 +179,14 @@
   .main__url {
     color: #56819f;
     line-height: 60px;
-    margin-left: 215px;
+    margin-left: 320px;
     text-decoration: none;
+    position: absolute;
   }
 
   .page-name {
     margin-left: 20px;
+    position: absolute;
   }
 
   .icons-links {
@@ -195,7 +196,7 @@
   .icon-link {
     filter: $filter-orange;
     width: 20px;
-    margin-left: 100px;
+    margin-left: 605px;
     opacity: 0;
   }
 
