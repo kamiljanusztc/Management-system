@@ -1,0 +1,28 @@
+
+.main__form-wrapper {
+  padding-top: 40px;
+
+  .form {
+    text-align: center;
+    padding-bottom: 20px;
+
+    .main__border-form {
+      padding-left: 15px;
+      width: 300px;
+      height: 40px;
+    }
+  }
+}
+
+
+.col-25 {
+  float: left;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.col-75 {
+  float: left;
+  width: 60%;
+  // margin-top: 6px;
+}

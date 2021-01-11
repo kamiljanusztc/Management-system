@@ -1,0 +1,72 @@
+/* Links */
+.btn-main {
+  width: 125px;
+  height: 40px;
+  margin: 20px auto;
+
+  .h4-title {
+    font-size: 18px;
+    margin: 0 auto;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .main__links {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.main__border-top-bottom {
+  height: 60px;
+  width: 685px;
+  display: flex;
+  margin: 0 auto;
+
+  &:hover {
+    .icon-link {
+      opacity: 1;
+      transition: $transition;
+    }
+
+    .icon-trash {
+      opacity: 1;
+      transition: $transition;
+    }
+  }
+}
+
+.main__url {
+  color: #56819f;
+  line-height: 60px;
+  margin-left: 300px;
+  text-decoration: none;
+  position: absolute;
+}
+
+.page-name {
+  margin-left: 20px;
+  position: absolute;
+}
+
+.icons-links {
+  margin-left: 1500px;
+}
+
+.icon-link {
+  filter: $filter-orange;
+  width: 20px;
+  margin-left: 605px;
+  opacity: 0;
+}
+
+.icon-trash {
+  filter: $filter-gray;
+  width: 16px;
+  margin-left: 25px;
+  opacity: 0;
+}
+
