@@ -18,9 +18,18 @@
       height: 100%;
     }
 
-    .sidebar__menu {
+    .hamburger {
       display: block;
       margin-left: 55px;
+
+      &:hover {
+        cursor: pointer;
+        transition: $transition;
+
+        span {
+          background-color: $button-color;
+        }
+      }
 
       span {
         display: block;
