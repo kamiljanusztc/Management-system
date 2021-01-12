@@ -2,10 +2,6 @@
 .main__section-statistics {
   position: relative;
 
-  .main__lines {
-    margin-top: 110px;
-  }
-
   .main__calendar {
     margin: 0;
     position: absolute;
@@ -53,6 +49,10 @@
   display: inline-block;
 }
 
+.line-diagram {
+  margin-top: 110px;
+}
+
 /* Diagram */
 .main__diagram {
   width: 100%;
@@ -60,7 +60,7 @@
   margin: 15px;
 
   .main__row {
-    margin-top: 140px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
