@@ -1,5 +1,5 @@
 /* General */
-.main__section-statistics {
+.main__section-wrapper {
   position: relative;
 
   .main__calendar {
@@ -42,6 +42,10 @@
     .btn-refresh {
       margin: 35px 0 35px 0;
     }
+  }
+
+  .btn-main {
+    margin: 0 auto;
   }
 }
 
@@ -123,7 +127,7 @@
   }
 
   .diagram-photo {
-    width: 75%;
-    margin: 15px auto;
+    width: 50%;
+    margin: auto;
   }
 }

@@ -1,13 +1,18 @@
 /* Button main */
 .btn-main {
-  position: relative;
+  display: flex;
   background-color: #f58220;
   color: $box-color;
   border-radius: $border-radius;
   width: auto;
   height: 40px;
   border-radius: 5px;
-  padding: 0 10px 0 10px;
+  margin: 30px auto;
+  padding: 10px 30px 0 30px;
+  font-family: $font-header;
+  font-size: 18px;
+  font-weight: $font-light;
+  border: none;
 
   &:hover {
     background-color: #ffa200;
@@ -23,6 +28,7 @@
   border-radius: $border-radius;
   width: 40px;
   height: 40px;
+  border: none;
 
   .refresh-icon {
     position: absolute;

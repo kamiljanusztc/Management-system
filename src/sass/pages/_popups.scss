@@ -1,0 +1,78 @@
+.popups__manager {
+  display: flex;
+  padding: 10px 0 10px 0;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .popups-title {
+    color: black;
+    font-size: 30px;
+    font-weight: $font-medium;
+    margin: 5px 0 0 20px;
+  }
+
+  .label-success {
+    color: $box-color;
+    background-color: #04ae00;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    margin: 45px 0 0 100px;
+  }
+}
+
+.blockquote {
+  margin-left: 0;
+  padding: 5px 20px 5px 20px;
+  display: block;
+  border-radius: 5px;
+}
+
+.blockquote-manager {
+  background-color: #f3f3f1;
+  padding: 0 auto;
+}
+
+.blockquote-user {
+  background-color: #bababa;
+
+  p {
+    color: $box-color;
+  }
+}
+
+.chat-message {
+  display: flex;
+  margin-top: 20px;
+
+  .input-container {
+    display: flex;
+    width: 100%;
+    // margin: 0;
+    // height: 100px;
+
+    .form-message {
+      padding: 15px 15px 15px 50px;
+      width: 925px;
+      height: 40px;
+    }
+
+    .message-icon {
+      position: absolute;
+      padding: 15px;
+      filter: $filter-gray;
+      width: 15px;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+      margin-top: -5px;
+    }
+  }
+
+  .btn-main {
+    margin: 0;
+  }
+}

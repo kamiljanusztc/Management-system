@@ -1,0 +1,46 @@
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 5px;
+}
+
+.arrow-icon {
+  filter: $filter-gray;
+  height: 17px;
+  margin-bottom: -3px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000000;
+  padding: 5px 30px 5px 10px;
+  font-size: 14px;
+  display: block;
+  border: none;
+  background-image: url("../../images/icons/arrow-up.svg");
+  background-size: 15px auto;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  font-family: $font-header;
+  font-size: 16px;
+  font-weight: $font-bold;
+  color: $text-color;
+
+  &:hover {
+    background-color: $background-color;
+    transition: $transition;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+  }
+}
