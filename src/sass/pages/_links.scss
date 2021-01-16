@@ -1,52 +1,54 @@
 /* Links */
+.links-wrapper {
+  margin: 0 200px;
 
-.main__border-top-bottom {
-  height: 60px;
-  width: 685px;
-  display: flex;
-  margin: 0 auto;
+  .table-links {
+    width: 100%;
 
-  &:hover {
+    .main__url {
+      color: #56819f;
+      text-decoration: none;
+      padding-left: 100px;
+    }
+
     .icon-link {
-      opacity: 1;
-      transition: $transition;
+      filter: $filter-orange;
+      width: 25px;
+      margin-right: 25px;
+      opacity: 0;
+      float: right;
     }
 
     .icon-trash {
-      opacity: 1;
+      filter: $filter-gray;
+      width: 20px;
+      margin-top: -6px;
+      opacity: 0;
+      float: right;
+    }
+
+    &:hover {
+      background-color: $background-color;
       transition: $transition;
+
+      .icon-link {
+        opacity: 1;
+        transition: $transition;
+        cursor: pointer;
+      }
+
+      .icon-trash {
+        opacity: 1;
+        transition: $transition;
+        cursor: pointer;
+      }
+    }
+
+    td {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }
 
-.main__url {
-  color: #56819f;
-  line-height: 60px;
-  margin-left: 300px;
-  text-decoration: none;
-  position: absolute;
-}
-
-.page-name {
-  margin-left: 20px;
-  position: absolute;
-}
-
-.icons-links {
-  margin-left: 1500px;
-}
-
-.icon-link {
-  filter: $filter-orange;
-  width: 20px;
-  margin-left: 605px;
-  opacity: 0;
-}
-
-.icon-trash {
-  filter: $filter-gray;
-  width: 16px;
-  margin-left: 25px;
-  opacity: 0;
-}
 

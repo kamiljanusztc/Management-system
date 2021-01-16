@@ -11,9 +11,8 @@
 </head>
 <body>
 
-  <div class="container-fluid">
-      <div>
-        <div class="sidebar menu">
+  <div class="container">
+        <div class="sidebar show">
           <div class="sidebar__nav">
             <img class="sidebar__logo" src="images/photos/logo.png" alt="Just do it logo"/>
             <div class="hamburger">
@@ -41,11 +40,10 @@
             </div>
           </div>
         </div>
-      </div>
 
       <div class="topbar__section">
         <div class="topbar">
-          <div class="topbar__container">
+          <div class="topbar__container container">
             <div class="topbar__nav">
               <img class="topbar__icon" src="images/icons/quit.svg" alt="quit"/>
             </div>
@@ -71,14 +69,13 @@
           <h3 class="h3-title">General statistic</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
-            <div class="main__calendar">
-              <div class="main__border-form calendar-items">
-                <p class="paragraph calendar-items data-start">09.01.2021</p>
-                <span class="line-vertical calendar-items"></span>
-                <p class="paragraph calendar-items data-stop">09.01.2021</p>
-                <img class="main__icon" src="images/icons/calendar.svg" alt="calendar"/>
+            <div class="calendar-row">
+              <div class="calendar-wrapper">
+                <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-20" min="2021-01-20" max="2022-01-01">
+                <span class="vertical-line"></span>
+                <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
-              <button class="btn-refresh calendar-items">
+              <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
               </button>
             </div>
@@ -133,76 +130,59 @@
             <button class="btn-main" type="submit">+add new</button>
             <div class="main__links">
               <div class="links-wrapper">
-                <div class="main__border-top-bottom">
-                  <tr>
+
+                <table>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Home page</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.homepage.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Currently offer</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.currently.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Blurpix</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.blurpix.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Your Site</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.yoursite.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Google</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.google.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Facebook</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.facebook.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Dashboard</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.dashboard.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Blurax</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.blurax.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Piece of Wine</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.pieceofwine.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom main__border-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Twitter</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.twitter.com</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
+                </table>
                 <button class="btn-main" type="submit">+add new</button>
               </div>
             </div>
@@ -216,48 +196,38 @@
             <button class="btn-main" type="submit">+add new</button>
             <div class="main__links">
               <div class="links-wrapper">
-                <div class="main__border-top-bottom">
-                  <tr>
+                <table>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Banner main</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.website.com/bannermain.gif</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Sign up banner</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.website.com/signup.gif</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Banner left side</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.website.com/leftside.gif</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Vertical banner</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.website.com/vert.gif</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Front banner</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.website.com/front.gif</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
-                <div class="main__border-top-bottom main__border-bottom">
-                  <tr>
+                  <tr class="table-links">
                     <td><h4 class="h2-title page-name">Horizontal banner</h4></td>
                     <td><a href="#" class="h4-title main__url">http://www.website.com/Horizontal.gif</a></td>
-                    <td><img class="icon-link" src="images/icons/links.svg" alt="icon link"/><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
                   </tr>
-                </div>
+                </table>
                 <button class="btn-main" type="submit">+add new</button>
               </div>
             </div>
@@ -301,7 +271,7 @@
                   <input class="paragraph main__border-form" type="tel" id="tel" name="Phone number" value="+1 432 555 00 44">
                 </div>
               </div>
-              <span class="main__lines"></span>
+              <span class="main__lines form-lines"></span>
               <div class="form">
                 <div class="form-label">
                   <label class="h2-title">Skype</label>
@@ -326,7 +296,7 @@
                   <input class="paragraph main__border-form" type="text" id="msn" name="Msn">
                 </div>
               </div>
-              <span class="main__lines"></span>
+              <span class="main__lines form-lines"></span>
               <div class="form">
                 <div class="form-label">
                   <label class="h2-title">Wallet</label>
@@ -335,7 +305,7 @@
                   <input class="paragraph main__border-form" type="text" id="wallet" name="Wallet">
                 </div>
               </div>
-              <span class="main__lines"></span>
+              <span class="main__lines form-lines"></span>
               <div class="form">
                 <div class="form-label">
                   <label class="h2-title">Password</label>
@@ -362,16 +332,15 @@
           <h3 class="h3-title">Payout history</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
-            <div class="main__calendar">
-              <div class="main__border-form calendar-items">
-                <p class="paragraph calendar-items data-start">09.01.2021</p>
-                <span class="line-vertical calendar-items"></span>
-                <p class="paragraph calendar-items data-stop">09.01.2021</p>
-                <img class="main__icon" src="images/icons/calendar.svg" alt="calendar"/>
+            <div class="calendar-row">
+              <div class="calendar-wrapper">
+                <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-20" min="2021-01-20" max="2022-01-01">
+                <span class="vertical-line"></span>
+                <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
-              <div class="btn-refresh calendar-items">
+              <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
-              </div>
+              </button>
             </div>
           </div>
           <span class="main__lines line-diagram"></span>
@@ -379,7 +348,11 @@
             <table>
               <tr>
                 <th>
-                  <select name="date">
+                  <select class="checkbox-date" name="date">
+                    <option>Date</option>
+                    <option>Date</option>
+                    <option>Date</option>
+                    <option>Date</option>
                     <option>Date</option>
                   </select>
                 </th>
@@ -458,16 +431,15 @@
           <h3 class="h3-title">Detail statistic</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
-            <div class="main__calendar">
-              <div class="main__border-form calendar-items">
-                <p class="paragraph calendar-items data-start">09.01.2021</p>
-                <span class="line-vertical calendar-items"></span>
-                <p class="paragraph calendar-items data-stop">09.01.2021</p>
-                <img class="main__icon" src="images/icons/calendar.svg" alt="calendar"/>
+            <div class="calendar-row">
+              <div class="calendar-wrapper">
+                <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-20" min="2021-01-20" max="2022-01-01">
+                <span class="vertical-line"></span>
+                <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
-              <div class="btn-refresh calendar-items">
+              <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
-              </div>
+              </button>
             </div>
           </div>
           <span class="main__lines line-diagram"></span>
@@ -482,7 +454,7 @@
                 <th class="h2-title">FTD</th>
                 <th class="h2-title">Depositors</th>
                 <th>
-                  <select name="date">
+                  <select class="checkbox-deposits" name="date">
                     <option>Deposits ($)</option>
                   </select>
                 </th>
@@ -614,18 +586,19 @@
         </div>
 
 
-        <div class="main__section">
+        <div class="main__section popups">
           <h3 class="h3-title">Online chat with your personal manager</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
             <div class="popups__manager">
-              <img src="images/photos/profilephoto.png" alt="Profile photo"/>
-              <span class="label-success paragraph">online</span>
-              <h2 class="popups-title">Mikhael E.</h2>
+              <img class="manager-image" src="images/photos/profilephoto.png" alt="Profile photo"/>
+              <div class="manager-data">
+                <h2 class="popups-title">Mikhael E.</h2>
+                <span class="label-success paragraph">online</span>
+              </div>
             </div>
           </div>
           <span class="main__lines"></span>
-
           <blockquote class="blockquote blockquote-manager">
             <p class="paragraph">Hello. Can I help you?</p>
           </blockquote>
@@ -644,6 +617,7 @@
             </div>
             <button class="btn-main" type="submit">Send</button>
           </div>
+          <div class="popups-mask"></div>
         </div>
 
 

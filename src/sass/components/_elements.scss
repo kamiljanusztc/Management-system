@@ -1,47 +1,26 @@
-/* Bottom lines */
+/* Lines */
 .main__lines {
   display: block;
   background: #e3e3e3;
-  width: 100%;
   height: 1px;
+  margin: 20px -20px 20px -20px;
 }
 
-.main__border-bottom {
-  border-bottom: 1px solid #e3e3e3;
-  // padding-bottom: 15px;
-}
-
-/* Boxes */
 .main__border-form {
   border: 1px solid #e3e3e3;
 }
 
-.main__border-top-bottom {
-  border-top: 1px solid #e3e3e3;
-  // border-bottom: 1px solid #e3e3e3;
-
-  &:hover {
-    background-color: $background-color;
-    transition: $transition;
-    cursor: pointer;
-  }
+.main__border-bottom {
+  border-bottom: 1px solid #e3e3e3;
 }
 
+/* Tables */
 .table-body {
   &:hover {
     background-color: $background-color;
     transition: $transition;
-    cursor: pointer;
   }
 }
-
-// .table-small {
-//   margin: auto;
-//   width: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
 
 td {
   text-align: left;
@@ -82,6 +61,7 @@ th {
   display: inline-block;
 }
 
+/* Pagination */
 .pagination-wrapper {
   text-align: center;
 
@@ -98,11 +78,11 @@ th {
   height: 40px;
   text-decoration: none;
   font-family: $font-header;
+  border-radius: 5px;
 
   &:hover {
     background-color: $background-color;
     color: $text-color;
-    border-radius: 5px;
   }
 }
 

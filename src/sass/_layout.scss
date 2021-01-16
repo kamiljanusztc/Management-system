@@ -1,4 +1,5 @@
 body {
+  position: relative;
   background-color: $background-color;
   color: $text-color;
   font-family: $font-header;
@@ -8,18 +9,12 @@ body {
   box-sizing: border-box;
 }
 
-// .container {
-//   width: 100%;
-//   max-width: 1170px;
-//   margin: 0 auto;
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
-
-.container-fluid {
+.container {
   width: 100%;
-  // padding-left: 15px;
-  // padding-right: 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 // .row {
@@ -60,7 +55,7 @@ body {
 
 .main {
   margin-left: 190px;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .main__wrapper {
@@ -71,6 +66,14 @@ body {
   height: 100%;
   background-color: $box-color;
   box-shadow: $box-shadow;
-  padding: 1px 20px 20px 20px;
+  padding: 10px 20px 10px 20px;
   margin-bottom: 20px;
+  max-width: 1170px;
+  // margin: 0 auto;
+}
+
+.popups {
+  // position: fixed;
+  // display: none;
+  width: 100%;
 }

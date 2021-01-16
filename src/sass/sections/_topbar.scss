@@ -6,8 +6,9 @@
   z-index: 1;
 
   .topbar {
-    background-color: $background-color;
+    background-color: $box-color;
     color: $box-color;
+    box-shadow: $box-shadow;
 
     .topbar__container {
       display: flex;
@@ -15,7 +16,6 @@
       flex-flow: row-reverse;
       background-color: $box-color;
       height: 60px;
-      border: 1px solid #e3e3e3;
 
       .topbar__nav {
         padding: 20px 20px 0 20px;
@@ -49,7 +49,6 @@
 
       .topbar__arrow {
         filter: $filter-gray;
-        //width: 18px;
         height: 10px;
         padding: 0 10px 0 10px;
       }
