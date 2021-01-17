@@ -3,6 +3,7 @@ body {
   background-color: $background-color;
   color: $text-color;
   font-family: $font-header;
+  width: 100vw;
 }
 
 * {
@@ -17,10 +18,16 @@ body {
   padding-right: 15px;
 }
 
-// .row {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
+.container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .col-sm-1 {
   flex: 0 0 8.33333%;
@@ -35,6 +42,51 @@ body {
 .col-sm-3 {
   flex: 0 0 25%;
   max-width: 25%;
+}
+
+.col-sm-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.col-sm-5 {
+  flex: 0 0 41.667%;
+  max-width: 41.667%;
+}
+
+.col-sm-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-sm-7 {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+}
+
+.col-sm-8 {
+  flex: 0 0 66.667%;
+  max-width: 66.667%;
+}
+
+.col-sm-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-sm-10 {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+}
+
+.col-sm-11 {
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%;
+}
+
+.col-sm-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 @media(max-width: 767px) {
@@ -70,10 +122,4 @@ body {
   margin-bottom: 20px;
   max-width: 1170px;
   // margin: 0 auto;
-}
-
-.popups {
-  // position: fixed;
-  // display: none;
-  width: 100%;
 }

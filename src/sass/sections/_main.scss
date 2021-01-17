@@ -24,7 +24,7 @@
     .vertical-line {
       border-left: 2px solid #e3e3e3;
       height: 28px;
-      margin: 20px;
+      margin: 20px 20px 20px -40px;
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
@@ -113,8 +113,13 @@
     }
   }
 
-  .diagram-photo {
-    width: 100px;
-    height: auto;
+  .diagram {
+    position: relative;
+    width: 80%;
+    margin: 20px;
+    margin: 0 auto;
+    #myChart{
+      margin-top: 20px;
+    }
   }
 }

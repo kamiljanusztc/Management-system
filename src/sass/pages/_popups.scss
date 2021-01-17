@@ -1,4 +1,51 @@
-.popups__manager {
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: $box-color;
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.modal__manager-profile {
   margin-top: -20px;
 
   .manager-image {
@@ -10,7 +57,7 @@
     display: inline-block;
     padding-left: 20px;
 
-    .popups-title {
+    .modal-title {
       color: black;
       font-size: 30px;
       font-weight: $font-medium;
@@ -26,49 +73,63 @@
   }
 }
 
-.blockquote {
-  margin-left: 0;
-  padding: 5px 20px 5px 20px;
-  display: block;
-  border-radius: 5px;
-}
+.blockquote-wrapper {
+  display: inline-block;
 
-.blockquote-manager {
-  background-color: #f3f3f1;
-  padding: 0 auto;
-}
+  .blockquote {
+    margin-left: 0;
+    border-radius: 5px;
+    display: flex;
+  }
 
-.blockquote-user {
-  background-color: #bababa;
+  .blockquote-manager {
+    background-image: url("../../images/photos/blockquote-light.png");
+    background-repeat: no-repeat;
+    padding: 7px 0 0 13px;
+  }
 
-  p {
-    color: $box-color;
+  .blockquote-user {
+    background-image: url("../../images/photos/blockquote-dark.png");
+    background-repeat: no-repeat;
+    padding: 0 13px 6px 13px;
+    margin-bottom: -15px;
+
+    p {
+      color: $box-color;
+    }
   }
 }
 
-.chat-message {
+.modal-form {
   display: flex;
+  margin: 40px 0 30px 0;
 
   .input-container {
     display: flex;
     width: 100%;
-    height: 100px;
+    height: auto;
 
     .form-message {
       padding: 15px 15px 15px 50px;
-      width: 925px;
+      width: auto;
       height: 40px;
+      margin: 0;
     }
 
-    .message-icon {
+    .form-icon {
       position: absolute;
       padding: 15px;
       filter: $filter-gray;
       width: 15px;
       color: white;
       min-width: 50px;
-      text-align: center;
       margin-top: -5px;
+      border-radius: 5px;
+    }
+
+    .password-icon {
+      margin-top: -1px;
+      padding: 13px;
     }
   }
 
@@ -77,8 +138,44 @@
   }
 }
 
-.popups-mask {
-  background-color: $sidebar-color;
-  opacity: 0.7;
+.modal-large {
   width: 100%;
+}
+
+.modal-small {
+  height: 100%;
+  width: 40%;
+  background-color: $box-color;
+  box-shadow: $box-shadow;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 20px;
+  margin: 200px auto;
+  max-width: 1170px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  margin-top: -15px;
+
+  .btn-main {
+    display: inline;
+    padding-bottom: 10px;
+  }
+
+  .btn-main-gray {
+    display: inline;
+    padding-bottom: 10px;
+    margin-right: -30px;
+  }
+}
+
+.modal-medium {
+  height: auto;
+  width: 60%;
+  background-color: $box-color;
+  box-shadow: $box-shadow;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 20px;
+  margin: 200px auto;
+  max-width: 1170px;
 }

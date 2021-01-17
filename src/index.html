@@ -71,7 +71,7 @@
           <div class="main__section-wrapper">
             <div class="calendar-row">
               <div class="calendar-wrapper">
-                <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-20" min="2021-01-20" max="2022-01-01">
+                <input class="calendar-field" id="date-start" name="date-start" value="2021-01-20" type="text" min="2021-01-20" max="2022-01-01">
                 <span class="vertical-line"></span>
                 <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
@@ -116,14 +116,14 @@
                   <h4 class="h4-title">Earned</h4>
                 </div>
               </div>
-              <div class="diagram-photo">
-                <img src="images/photos/diagram.png" alt="Diagram photo"/>
+              <div class="diagram">
+                <canvas id="myChart"></canvas>
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div class="main__section">
+        <div class="main__section" id="links">
           <h3 class="h3-title">Links</h3>
           <span class="main__lines"></span>
           <div class="main__links-section">
@@ -189,7 +189,7 @@
           </div>
         </div>
 
-        <div class="main__section">
+        <div class="main__section" id="banners">
           <h3 class="h3-title">Banners</h3>
           <span class="main__lines"></span>
           <div class="main__banners-section">
@@ -234,7 +234,7 @@
           </div>
         </div>
 
-        <div class="main__section">
+        <div class="main__section" id="personal-data">
           <h3 class="h3-title">Personal data</h3>
           <span class="main__lines"></span>
           <div class="main__personal-data-section">
@@ -328,15 +328,15 @@
           </div>
         </div>
 
-        <div class="main__section">
+        <div class="main__section" id="payout-history">
           <h3 class="h3-title">Payout history</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
             <div class="calendar-row">
               <div class="calendar-wrapper">
-                <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-20" min="2021-01-20" max="2022-01-01">
+                <input class="calendar-field" id="date-start-payout" name="date-start" value="2021-01-20" type="text" min="2021-01-20" max="2022-01-01">
                 <span class="vertical-line"></span>
-                <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                <input class="calendar-field" type="date" id="date-stop-payout" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
               <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
@@ -427,15 +427,15 @@
           </div>
         </div>
 
-        <div class="main__section">
+        <div class="main__section" id="detail-statistic">
           <h3 class="h3-title">Detail statistic</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
             <div class="calendar-row">
               <div class="calendar-wrapper">
-                <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-20" min="2021-01-20" max="2022-01-01">
+                <input class="calendar-field" id="date-start-detail" name="date-start-detail" value="2021-01-20" type="text" min="2021-01-20" max="2022-01-01">
                 <span class="vertical-line"></span>
-                <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                <input class="calendar-field" type="date" id="date-stop" name="date-stop-detail" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
               <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
@@ -585,45 +585,148 @@
           </div>
         </div>
 
+        <div class="overlay" id="overlay">
 
-        <div class="main__section popups">
-          <h3 class="h3-title">Online chat with your personal manager</h3>
-          <span class="main__lines"></span>
-          <div class="main__section-wrapper">
-            <div class="popups__manager">
-              <img class="manager-image" src="images/photos/profilephoto.png" alt="Profile photo"/>
-              <div class="manager-data">
-                <h2 class="popups-title">Mikhael E.</h2>
-                <span class="label-success paragraph">online</span>
+          <div class="modal" id="modal-chat">
+            <div class="btn-close js--close-modal">x</div>
+            <h3 class="h3-title">Online chat with your personal manager</h3>
+            <span class="main__lines"></span>
+            <div class="main__section-wrapper">
+              <div class="modal__manager-profile">
+                <img class="manager-image" src="images/photos/profilephoto.png" alt="Profile photo"/>
+                <div class="manager-data">
+                  <h2 class="modal-title">Mikhael E.</h2>
+                  <span class="label-success paragraph">online</span>
+                </div>
+              </div>
+            </div>
+            <span class="main__lines"></span>
+            <div class="blockquote-wrapper">
+              <blockquote class="blockquote blockquote-manager">
+                <p class="paragraph">Hello. Can I help you?</p>
+              </blockquote>
+              <blockquote class="blockquote blockquote-user">
+                <p class="paragraph">Hello! I would like to know about Postback.</p>
+              </blockquote>
+              <blockquote class="blockquote blockquote-manager">
+                <p class="paragraph">Ok. 5 min...</p>
+              </blockquote>
+            </div>
+            <span class="main__lines"></span>
+            <div class="modal-form">
+              <div class="input-container">
+                <input class="paragraph main__border-form form-message" type="email" id="message" name="message" placeholder="Enter the message...">
+                <img class="form-icon" src="images/icons/message.svg" alt="message icon"/>
+              </div>
+              <button class="btn-main js--close-modal" type="submit">Send</button>
+            </div>
+          </div>
+
+          <div class="modal" id="modal-quit"></div>
+            <div class="btn-close js--close-modal">x</div>
+            <h3 class="h3-title">Do you really want to Quit?</h3>
+            <span class="main__lines"></span>
+            <div class="buttons-wrapper">
+              <button class="btn-main-gray" type="submit">Cancel</button>
+              <button class="btn-main js--close-modal" type="submit">Quit</button>
+            </div>
+          </div>
+
+          <div class="modal" id="modal-login">>
+            <div class="btn-close js--close-modal">x</div>
+            <h3 class="h3-title">Login</h3>
+            <span class="main__lines"></span>
+            <div>
+              <div class="modal-form">
+                <div class="input-container">
+                  <input class="paragraph main__border-form form-message" type="text" id="login" name="Login" placeholder="login name">
+                  <img class="form-icon" src="images/icons/login.svg" alt="login icon"/>
+                </div>
+                <div class="input-container">
+                  <input class="paragraph main__border-form form-message" type="password" id="password-login" name="Password" placeholder="password">
+                  <img class="form-icon password-icon" src="images/icons/password.svg" alt="password icon"/>
+                </div>
+                <button class="btn-main js--close-modal" type="submit">Enter</button>
               </div>
             </div>
           </div>
-          <span class="main__lines"></span>
-          <blockquote class="blockquote blockquote-manager">
-            <p class="paragraph">Hello. Can I help you?</p>
-          </blockquote>
-          <blockquote class="blockquote blockquote-user">
-            <p class="paragraph">Hello! I would like to know about Postback.</p>
-          </blockquote>
-          <blockquote class="blockquote blockquote-manager">
-            <p class="paragraph">Ok. 5 min...</p>
-          </blockquote>
 
-          <span class="main__lines"></span>
-          <div class="chat-message">
-            <div class="input-container">
-              <input class="paragraph main__border-form form-message" type="email" id="message" name="message" placeholder="Enter the message...">
-              <img class="message-icon" src="images/icons/message.svg" alt="message icon"/>
-            </div>
-            <button class="btn-main" type="submit">Send</button>
-          </div>
-          <div class="popups-mask"></div>
         </div>
+
+          <!-- <div class="main__section popup-large">
+            <div class="btn-close js--close-modal">x</div>
+            <h3 class="h3-title">Online chat with your personal manager</h3>
+            <span class="main__lines"></span>
+            <div class="main__section-wrapper">
+              <div class="modal__manager-profile">
+                <img class="manager-image" src="images/photos/profilephoto.png" alt="Profile photo"/>
+                <div class="manager-data">
+                  <h2 class="popups-title">Mikhael E.</h2>
+                  <span class="label-success paragraph">online</span>
+                </div>
+              </div>
+            </div>
+            <span class="main__lines"></span>
+            <div class="blockquote-wrapper">
+              <blockquote class="blockquote blockquote-manager">
+                <p class="paragraph">Hello. Can I help you?</p>
+              </blockquote>
+              <blockquote class="blockquote blockquote-user">
+                <p class="paragraph">Hello! I would like to know about Postback.</p>
+              </blockquote>
+              <blockquote class="blockquote blockquote-manager">
+                <p class="paragraph">Ok. 5 min...</p>
+              </blockquote>
+            </div>
+            <span class="main__lines"></span>
+            <div class="modal-form">
+              <div class="input-container">
+                <input class="paragraph main__border-form form-message" type="email" id="message" name="message" placeholder="Enter the message...">
+                <img class="form-icon" src="images/icons/message.svg" alt="message icon"/>
+              </div>
+              <button class="btn-main js--close-modal" type="submit">Send</button>
+            </div>
+            <div class="popups-mask"></div>
+          </div>
+
+          <div class="popup-small popups">
+            <div class="btn-close js--close-modal">x</div>
+            <h3 class="h3-title">Do you really want to Quit?</h3>
+            <span class="main__lines"></span>
+            <div class="buttons-wrapper">
+              <button class="btn-main-gray" type="submit">Cancel</button>
+              <button class="btn-main js--close-modal" type="submit">Quit</button>
+            </div>
+          </div>
+
+          <div class="popup-medium popups">
+            <div class="btn-close js--close-modal">x</div>
+            <h3 class="h3-title">Login</h3>
+            <span class="main__lines"></span>
+            <div class="">
+              <div class="modal-form">
+                <div class="input-container">
+                  <input class="paragraph main__border-form form-message" type="text" id="login" name="Login" placeholder="login name">
+                  <img class="form-icon" src="images/icons/login.svg" alt="login icon"/>
+                </div>
+                <div class="input-container">
+                  <input class="paragraph main__border-form form-message" type="password" id="password" name="Password" placeholder="password">
+                  <img class="form-icon password-icon" src="images/icons/password.svg" alt="password icon"/>
+                </div>
+                <button class="btn-main js--close-modal" type="submit">Enter</button>
+              </div>
+            </div>
+          </div> -->
+
+
+
+
 
 
       </div>
-  </div>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
