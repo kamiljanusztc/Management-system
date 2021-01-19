@@ -102,6 +102,14 @@
 
     .sidebar__profile-manager {
       display: flex;
+
+      &:hover {
+        cursor: pointer;
+        transition: $transition;
+        background-color: #282828;
+        margin-left: -10px;
+
+      }
     }
 
     .sidebar__dot {

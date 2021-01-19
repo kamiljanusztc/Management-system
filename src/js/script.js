@@ -1,6 +1,15 @@
 const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
 // const mainSection = document.querySelector('.main__section');
+const modalChat = document.querySelector('.sidebar__profile-manager');
+const modalLogin = document.querySelector('.login');
+const modalQuit = document.querySelector('.quit');
+// const modalChatId = document.getElementById('modal-chat');
+// const modalQuitId = ocument.getElementById('modal-quit');
+// const modalLoginId = document.getElementById('modal-login');
+// const pages = document.querySelectorAll('.pages');
+const navMobile = document.querySelector('.hamburger-mobile');
+const navOptions = document.querySelector('.navbar__options');
 
 
 function toggleMenu(visible) {
@@ -12,17 +21,7 @@ hamburger.addEventListener('click', function(e) {
   toggleMenu();
 });
 
-// for (let link of mainSection) {
-//   link.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     const clickedElement = this;
 
-//     clickedElement.getAttribute('href').replace('#', '');
-
-//   });
-// }
-
-// Open modal (add show class to overlay)
 
 // Close modal (remove class 'show' from overlay)
 function closeModal() {
@@ -51,7 +50,7 @@ document.addEventListener('keyup', function(e) {
   }
 });
 
-// oOpen modal and close all others
+// Open modal and close all others
 function openModal(modal) {
   document.querySelectorAll('#overlay > *').forEach(function(modal) {
     modal.classList.remove('show');
@@ -59,6 +58,42 @@ function openModal(modal) {
   document.querySelector('#overlay').classList.add('show');
   document.querySelector(modal).classList.add('show');
 }
+
+modalChat.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal('#modal-chat');
+});
+
+modalLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal('#modal-login');
+});
+
+modalQuit.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal('#modal-quit');
+});
+
+// /* Active section */
+// for (let section of mainSection) {
+//   section.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     section.classList.toggle('show');
+//   })
+// }
+
+// for (let page of pages) {
+//   page.addEventListener('click', function (e) {
+//     e.preventDefault();
+
+//     page.classList.toggle('show');
+//   });
+// }
+
+navMobile.addEventListener('click', function (e) {
+  e.preventDefault();
+  navOptions.classList.toggle('hidden');
+});
 
 // Diagram
 var ctx = document.getElementById('myChart').getContext('2d');

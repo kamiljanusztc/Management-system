@@ -14,8 +14,8 @@ body {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
 }
 
 .container-fluid {
@@ -91,18 +91,34 @@ body {
 
 @media(max-width: 767px) {
   @include grid('sm');
+  .sidebar {
+    display: none;
+  }
+
+  .topbar__section {
+    display: none;
+  }
 }
 
 @media(min-width: 768px) {
   @include grid('md');
+  .navbar__mobile {
+    display: none;
+  }
 }
 
 @media(min-width: 992px) {
   @include grid('lg');
+  .navbar__mobile {
+    display: none;
+  }
 }
 
 @media(min-width: 1200px) {
   @include grid('xl');
+  .navbar__mobile {
+    display: none;
+  }
 }
 
 .main {
@@ -120,6 +136,4 @@ body {
   box-shadow: $box-shadow;
   padding: 10px 20px 10px 20px;
   margin-bottom: 20px;
-  max-width: 1170px;
-  // margin: 0 auto;
 }

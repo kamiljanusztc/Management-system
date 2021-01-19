@@ -1,9 +1,3 @@
-/* Global */
-.main {
-  transition: $transition;
-  padding-left: 15px;
-}
-
 /* Calendar */
 .calendar-row {
   display: flex;
@@ -118,8 +112,13 @@
     width: 80%;
     margin: 20px;
     margin: 0 auto;
+
     #myChart{
       margin-top: 20px;
     }
   }
 }
+
+// #details, #links, #banners, #personal-data, #payout, #postback {
+//   display: none;
+// }
