@@ -1,5 +1,4 @@
 @media(max-width: 767px) {
-
   .navbar__mobile {
     // background-color: $sidebar-color;
     // width: 100vw;
@@ -26,11 +25,11 @@
           margin-left: 10px;
           text-decoration: none;
           padding-left: 50px;
+        }
 
-          img {
-            width: 20px;
-            filter: $filter-white;
-          }
+        img {
+          width: 20px;
+          filter: $filter-white;
         }
 
         .navbar__notification {
@@ -47,15 +46,15 @@
         .hamburger-mobile {
           margin-top: -35px;
           margin-left: 130px;
+        }
 
-          span {
-            display: block;
-            position: relative;
-            background: $button-color;
-            width: 25px;
-            height: 2px;
-            margin: 8px auto;
-          }
+        span {
+          display: block;
+          position: relative;
+          background: $button-color;
+          width: 25px;
+          height: 2px;
+          margin: 8px auto;
         }
       }
 
@@ -70,27 +69,27 @@
         ul {
           // float: right;
           // align-items: center;
+        }
 
-          li {
-            // float: right;
-            display: flex;
+        li {
+          // float: right;
+          display: flex;
+        }
 
-            a {
-              text-decoration: none;
-              color: $text-color;
-              font-family: $font-header;
-              font-size: 17px;
-              font-weight: $font-light;
-              padding: 15px;
-            }
+        a {
+          text-decoration: none;
+          color: $text-color;
+          font-family: $font-header;
+          font-size: 17px;
+          font-weight: $font-light;
+          padding: 15px;
+        }
 
-            .navbar__icon {
-              filter: $filter-gray;
-              width: 15px;
-              height: 12px;
-              margin-right: 15px;
-            }
-          }
+        .navbar__icon {
+          filter: $filter-gray;
+          width: 15px;
+          height: 12px;
+          margin-right: 15px;
         }
       }
 

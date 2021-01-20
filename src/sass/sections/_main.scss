@@ -119,6 +119,10 @@
   }
 }
 
-// #details, #links, #banners, #personal-data, #payout, #postback {
-//   display: none;
-// }
+#details, #links, #banners, #personal-data, #payout, #postback {
+  display: none;
+}
+
+.active {
+  display: block;
+}

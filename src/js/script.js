@@ -1,15 +1,48 @@
+/* global Chart */
+/* eslint-disable no-unused-vars */
+
 const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
-// const mainSection = document.querySelector('.main__section');
+
 const modalChat = document.querySelector('.sidebar__profile-manager');
 const modalLogin = document.querySelector('.login');
 const modalQuit = document.querySelector('.quit');
-// const modalChatId = document.getElementById('modal-chat');
-// const modalQuitId = ocument.getElementById('modal-quit');
-// const modalLoginId = document.getElementById('modal-login');
-// const pages = document.querySelectorAll('.pages');
+
 const navMobile = document.querySelector('.hamburger-mobile');
 const navOptions = document.querySelector('.navbar__options');
+
+const pageLinks = document.querySelectorAll('.pages li');
+// const mainSection = document.getElementById('.main__section');
+// const linkId = pageLinks.getAttribute('href');
+const pageId = document.getElementById('links');
+
+
+
+for (let pageLink of pageLinks) {
+  pageLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log('link clicked');
+    const clickedElement = this;
+
+    pageId.classList.add('active');
+    console.log('active class added');
+
+    const linkId = pageLink.getAttribute('href');
+
+
+
+    if (linkId == pageId) {
+      pageId.classList.add('active');
+      console.log('active class added');
+    }
+
+
+  });
+}
+
+
+
+
 
 
 function toggleMenu(visible) {
@@ -20,8 +53,6 @@ hamburger.addEventListener('click', function(e) {
   e.preventDefault();
   toggleMenu();
 });
-
-
 
 // Close modal (remove class 'show' from overlay)
 function closeModal() {
@@ -59,37 +90,25 @@ function openModal(modal) {
   document.querySelector(modal).classList.add('show');
 }
 
+// Modal chat
 modalChat.addEventListener('click', function (e) {
   e.preventDefault();
   openModal('#modal-chat');
 });
 
+// Modal login
 modalLogin.addEventListener('click', function (e) {
   e.preventDefault();
   openModal('#modal-login');
 });
 
+// Modal quit
 modalQuit.addEventListener('click', function (e) {
   e.preventDefault();
   openModal('#modal-quit');
 });
 
-// /* Active section */
-// for (let section of mainSection) {
-//   section.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     section.classList.toggle('show');
-//   })
-// }
-
-// for (let page of pages) {
-//   page.addEventListener('click', function (e) {
-//     e.preventDefault();
-
-//     page.classList.toggle('show');
-//   });
-// }
-
+// Navigation mobile
 navMobile.addEventListener('click', function (e) {
   e.preventDefault();
   navOptions.classList.toggle('hidden');
