@@ -6,45 +6,41 @@ const sidebar = document.querySelector('.sidebar');
 
 const modalChat = document.querySelector('.sidebar__profile-manager');
 const modalLogin = document.querySelector('.login');
-const modalQuit = document.querySelector('.quit');
+const modalQuit = document.querySelector('.quit-option');
 
 const navMobile = document.querySelector('.hamburger-mobile');
 const navOptions = document.querySelector('.navbar__options');
 
-const pageLinks = document.querySelectorAll('.pages li');
+const pageLinks = document.querySelectorAll('.pages a');
 // const mainSection = document.getElementById('.main__section');
 // const linkId = pageLinks.getAttribute('href');
 const pageId = document.getElementById('links');
 
-
-
+// Page links
 for (let pageLink of pageLinks) {
   pageLink.addEventListener('click', function (e) {
     e.preventDefault();
     console.log('link clicked');
     const clickedElement = this;
 
-    pageId.classList.add('active');
-    console.log('active class added');
+    pageId.classList.remove('hidden');
 
     const linkId = pageLink.getAttribute('href');
 
+    // if (linkId == pageId) {
+    //   pageId.classList.add('active');
+    //   console.log('active class added');
+    // }
 
-
-    if (linkId == pageId) {
+    if (linkId == '#' + pageId) {
       pageId.classList.add('active');
-      console.log('active class added');
+      console.log('add active class');
     }
-
 
   });
 }
 
-
-
-
-
-
+// Menu
 function toggleMenu(visible) {
   sidebar.classList.toggle('show', visible);
 }
@@ -105,6 +101,7 @@ modalLogin.addEventListener('click', function (e) {
 // Modal quit
 modalQuit.addEventListener('click', function (e) {
   e.preventDefault();
+  console.log('modal quit clicked');
   openModal('#modal-quit');
 });
 

@@ -15,7 +15,8 @@
 
   <div class="navbar__mobile">
     <div class="navbar__wrapper row">
-      <div class="navbar__main">
+
+      <div class="navbar__main col-sm-12">
         <img class="navbar__logo" src="images/photos/logo.png" alt="Just do it logo"/>
         <a href="#notification"><img class="navbar__icon" src="images/icons/notification.svg" alt="notification"/><span class="navbar__notification"></span></a>
         <div class="hamburger-mobile">
@@ -25,7 +26,7 @@
         </div>
       </div>
 
-      <div class="navbar__options">
+      <div class="navbar__options col-sm-12">
         <ul class="pages">
           <li><a href="#general"><img class="navbar__icon" src="images/icons/general.svg" alt="General"/>General</a></li>
           <li><a href="#details"><img class="navbar__icon" src="images/icons/details.svg" alt="Details"/>Details</a></li>
@@ -35,7 +36,7 @@
           <li><a href="#payout"><img class="navbar__icon" src="images/icons/payout.svg" alt="Payout"/>Payout</a></li>
           <li><a href="#postback"><img class="navbar__icon" src="images/icons/postback.svg" alt="Postback"/>Postback</a></li>
           <li><a href="#manager"><img class="navbar__icon" src="images/icons/message.svg" alt="Manager"/>Your Manager</a></li>
-          <li><a href="#manager"><img class="navbar__icon" src="images/icons/wallet.svg" alt="Manager"/>Wallet</a><img class="navbar__icon" src="images/icons/arrow-down.svg" alt="Manager"/></li>
+          <li><a href="#manager"><img class="navbar__icon" src="images/icons/wallet.svg" alt="Manager"/>Wallet</a><img class="navbar__icon-dropdown" src="images/icons/arrow-down.svg" alt="Manager"/></li>
           <li><a href="#manager"><img class="navbar__icon" src="images/icons/profile.svg" alt="Manager"/>Your Account</a></li>
           <li class="quit"><a href="#quit"><img class="navbar__icon" src="images/icons/quit.svg" alt="Manager"/>Log out</a></li>
         </ul>
@@ -75,39 +76,289 @@
       </div>
     </div>
 
-      <div class="topbar__section">
-        <div class="topbar">
-          <div class="topbar__container container">
-            <div class="topbar__nav quit">
-              <img class="topbar__icon" src="images/icons/quit.svg" alt="quit"/>
-            </div>
-            <div class="topbar__nav login">
-              <img class="topbar__icon" src="images/icons/profile.svg" alt="account"/>
-              <p class="paragraph">Leonardo Dicaprio</p>
-            </div>
-            <div class="topbar__nav">
-              <img class="topbar__icon" src="images/icons/notification.svg" alt="notification"/>
-              <span class="topbar__notification"></span>
-            </div>
-            <div class="topbar__nav">
-              <img class="topbar__icon" src="images/icons/wallet.svg" alt="wallet"/>
-              <h1 class="topbar__wallet-sum h1-title">$1,500.00</h1>
-              <img class="topbar__arrow" src="images/icons/arrow-down.svg" alt="arrow"/>
-            </div>
+    <div class="topbar__section container">
+      <div class="topbar">
+        <div class="topbar__container container">
+          <div class="topbar__nav quit-option">
+            <img class="topbar__icon" src="images/icons/quit.svg" alt="quit"/>
+          </div>
+          <div class="topbar__nav login">
+            <img class="topbar__icon" src="images/icons/profile.svg" alt="account"/>
+            <p class="paragraph">Leonardo Dicaprio</p>
+          </div>
+          <div class="topbar__nav">
+            <img class="topbar__icon" src="images/icons/notification.svg" alt="notification"/>
+            <span class="topbar__notification"></span>
+          </div>
+          <div class="topbar__nav">
+            <img class="topbar__icon" src="images/icons/wallet.svg" alt="wallet"/>
+            <h1 class="topbar__wallet-sum h1-title">$1,500.00</h1>
+            <img class="topbar__arrow" src="images/icons/arrow-down.svg" alt="arrow"/>
           </div>
         </div>
       </div>
-      <div class="main">
-      <div class="main__wrapper">
-        <div class="main__section active" id="general">
-          <h3 class="h3-title">General statistic</h3>
+    </div>
+
+    <div class="main">
+        <div class="main__wrapper">
+          <div class="main__section active" id="general">
+            <h3 class="h3-title">General statistic</h3>
+            <span class="main__lines"></span>
+            <div class="main__section-wrapper">
+              <div class="calendar-row">
+                <div class="calendar-wrapper">
+                  <input class="calendar-field" id="date-start" name="date-start" value="2021-01-20" type="text" >
+                  <span class="vertical-line"></span>
+                  <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                </div>
+                <button class="btn-refresh">
+                  <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
+                </button>
+              </div>
+            </div>
+            <span class="main__lines line-diagram"></span>
+
+            <div class="main__diagram">
+              <div class="main__row">
+                <div class="main__diagram-numbers col-md-4 main__border-bottom">
+                  <h2 class="h2-title">Visit Signups</h2>
+                  <h4 class="h4-title">124</h4>
+                </div>
+                <div class="main__diagram-numbers col-md-4 main__border-bottom">
+                  <h2 class="h2-title">Net deposit</h2>
+                  <h4 class="h4-title">564</h4>
+                </div>
+                <div class="main__diagram-numbers col-md-4 main__border-bottom">
+                  <h2 class="h2-title">FTD</h2>
+                  <h4 class="h4-title">445</h4>
+                </div>
+                <div class="main__diagram-numbers col-md-4 main__border-bottom">
+                  <h2 class="h2-title">Turn over</h2>
+                  <h4 class="h4-title">432</h4>
+                </div>
+              </div>
+              <div class="main__earnings-chart">
+                <div class="diagram">
+                  <h2 class="h2-title diagram-title">Earnings chart</h2>
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="main__section col-sm-12" id="links">
+          <h3 class="h3-title">Links</h3>
+          <span class="main__lines"></span>
+          <div class="main__links-section">
+            <button class="btn-main" type="submit">+add new</button>
+            <div class="main__links">
+              <div class="links-wrapper">
+                <table>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Home page</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.homepage.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Currently offer</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.currently.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Blurpix</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.blurpix.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Your Site</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.yoursite.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Google</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.google.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Facebook</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.facebook.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Dashboard</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.dashboard.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Blurax</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.blurax.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Piece of Wine</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.pieceofwine.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Twitter</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.twitter.com</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                </table>
+                <button class="btn-main" type="submit">+add new</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__section col-sm-12" id="banners">
+          <h3 class="h3-title">Banners</h3>
+          <span class="main__lines"></span>
+          <div class="main__banners-section">
+            <button class="btn-main" type="submit">+add new</button>
+            <div class="main__links">
+              <div class="links-wrapper">
+                <table>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Banner main</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.website.com/bannermain.gif</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Sign up banner</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.website.com/signup.gif</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Banner left side</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.website.com/leftside.gif</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Vertical banner</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.website.com/vert.gif</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Front banner</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.website.com/front.gif</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                  <tr class="table-links">
+                    <td><h4 class="h2-title page-name">Horizontal banner</h4></td>
+                    <td><a href="#" class="h4-title main__url">http://www.website.com/Horizontal.gif</a></td>
+                    <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
+                  </tr>
+                </table>
+                <button class="btn-main" type="submit">+add new</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__section col-sm-12" id="personal-data">
+          <h3 class="h3-title">Personal data</h3>
+          <span class="main__lines"></span>
+          <div class="main__personal-data-section">
+            <form class="main__form-wrapper" method="POST">
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Name</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="text" id="fname" name="Name" value="Leonardo" required>
+                </div>
+              </div>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Surname</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="text" id="lname" name="Surname" value="Dicaprio" required>
+                </div>
+              </div>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">E-mail</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="email" id="email" name="E-mail" value="leo@gmail.com" required>
+                </div>
+              </div>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Phone number</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="tel" id="tel" name="Phone number" value="+1 432 555 00 44">
+                </div>
+              </div>
+              <span class="main__lines form-lines"></span>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Skype</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="text" id="skype" name="Skype" value="Leonardo.D">
+                </div>
+              </div>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">ICQ</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="text" id="icq" name="ICQ">
+                </div>
+              </div>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Msn</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="text" id="msn" name="Msn">
+                </div>
+              </div>
+              <span class="main__lines form-lines"></span>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Wallet</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="text" id="wallet" name="Wallet">
+                </div>
+              </div>
+              <span class="main__lines form-lines"></span>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Password</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="password" id="password" name="Password" required>
+                </div>
+              </div>
+              <div class="form">
+                <div class="form-label">
+                  <label class="h2-title">Repeat</label>
+                </div>
+                <div class="form-input">
+                  <input class="paragraph main__border-form" type="password" id="password-repeat" name="Repeat" required>
+                </div>
+              </div>
+              <span class="main__lines"></span>
+              <button class="btn-main" type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="main__section" id="payout">
+          <h3 class="h3-title">Payout history</h3>
           <span class="main__lines"></span>
           <div class="main__section-wrapper">
             <div class="calendar-row">
               <div class="calendar-wrapper">
-                <input class="calendar-field" id="date-start" name="date-start" value="2021-01-20" type="text" >
+                <input class="calendar-field" id="date-start-payout" name="date-start" value="2021-01-20" type="text">
                 <span class="vertical-line"></span>
-                <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                <input class="calendar-field" type="date" id="date-stop-payout" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
               </div>
               <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
@@ -115,583 +366,325 @@
             </div>
           </div>
           <span class="main__lines line-diagram"></span>
-          <div class="main__diagram">
-            <div class="main__row">
-              <div class="main__diagram-numbers main__border-bottom">
-                <h2 class="h2-title">Visit Signups</h2>
-                <h4 class="h4-title">124</h4>
-              </div>
-              <div class="main__diagram-numbers main__border-bottom">
-                <h2 class="h2-title">Net deposit</h2>
-                <h4 class="h4-title">564</h4>
-              </div>
-              <div class="main__diagram-numbers main__border-bottom">
-                <h2 class="h2-title">FTD</h2>
-                <h4 class="h4-title">445</h4>
-              </div>
-              <div class="main__diagram-numbers main__border-bottom">
-                <h2 class="h2-title">Turn over</h2>
-                <h4 class="h4-title">432</h4>
-              </div>
-            </div>
-            <div class="main__earnings-chart">
-              <h2 class="h2-title">Earnings chart</h2>
-              <div class="main__tabs">
-                <div class="tab button__tabs">
-                  <span class="dot-blue"></span>
-                  <h4 class="h4-title">Signups</h4>
-                </div>
-                <div class="tab button__tabs">
-                  <span class="dot-orange"></span>
-                  <h4 class="h4-title">FTD</h4>
-                </div>
-                <div class="tab button__tabs">
-                  <span class="dot-green"></span>
-                  <h4 class="h4-title">Earned</h4>
-                </div>
-              </div>
-              <div class="diagram">
-                <canvas id="myChart"></canvas>
+          <div class="scroll-wrapper">
+            <table>
+              <tr>
+                <th>
+                  <select class="checkbox-date" name="date">
+                    <option>Date</option>
+                    <option>Date</option>
+                    <option>Date</option>
+                    <option>Date</option>
+                    <option>Date</option>
+                  </select>
+                </th>
+                <th class="h2-title">Amount ($)</th>
+                <th class="h2-title">Deal</th>
+                <th class="h2-title">Account</th>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">17/08/02 (12:58)</td>
+                <td class="paragraph">34,425.00</td>
+                <td class="paragraph">cpl (200)</td>
+                <td class="paragraph">bank</td>
+              </tr>
+            </table>
+            <div class="pagination-wrapper">
+              <div class="pagination">
+                <a href="#"><img class="arrow-icon" src="images/icons/arrow-left.svg" alt="arrow left"/></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#"><img class="arrow-icon" src="images/icons/arrow-right.svg" alt="arrow right"/></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="main__section" id="links">
-        <h3 class="h3-title">Links</h3>
-        <span class="main__lines"></span>
-        <div class="main__links-section">
-          <button class="btn-main" type="submit">+add new</button>
-          <div class="main__links">
-            <div class="links-wrapper">
-              <table>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Home page</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.homepage.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Currently offer</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.currently.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Blurpix</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.blurpix.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Your Site</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.yoursite.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Google</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.google.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Facebook</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.facebook.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Dashboard</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.dashboard.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Blurax</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.blurax.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Piece of Wine</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.pieceofwine.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Twitter</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.twitter.com</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-              </table>
-              <button class="btn-main" type="submit">+add new</button>
+        <div class="main__section" id="details">
+          <h3 class="h3-title">Detail statistic</h3>
+          <span class="main__lines"></span>
+          <div class="main__section-wrapper">
+            <div class="calendar-row">
+              <div class="calendar-wrapper">
+                <input class="calendar-field" id="date-start-detail" name="date-start-detail" value="2021-01-20" type="text">
+                <span class="vertical-line"></span>
+                <input class="calendar-field" type="date" id="date-stop-detail" name="date-stop-detail" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+              </div>
+              <button class="btn-refresh">
+                <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
+              </button>
+            </div>
+          </div>
+          <span class="main__lines line-diagram"></span>
+          <div class="scroll-wrapper">
+            <table>
+              <tr>
+                <th class="h2-title">Tracker name</th>
+                <th class="h2-title">Initiated date</th>
+                <th class="h2-title">Visits</th>
+                <th class="h2-title">Unique</th>
+                <th class="h2-title">Signups</th>
+                <th class="h2-title">FTD</th>
+                <th class="h2-title">Depositors</th>
+                <th>
+                  <select class="checkbox-deposits" name="date">
+                    <option>Deposits ($)</option>
+                  </select>
+                </th>
+                <th class="h2-title">Payout ($)</th>
+                <th class="h2-title">Turnover</th>
+                <th class="h2-title">Deal</th>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+              <tr class="table-body">
+                <td class="paragraph ">aff/sam_test</td>
+                <td class="paragraph">17/08/02 (12:58)</td>
+                <td class="paragraph">232</td>
+                <td class="paragraph">114</td>
+                <td class="paragraph">12</td>
+                <td class="paragraph">6</td>
+                <td class="paragraph">3</td>
+                <td class="paragraph">29,436.00</td>
+                <td class="paragraph">941.00</td>
+                <td class="paragraph">784,435.00</td>
+                <td class="paragraph">cpl (200)</td>
+              </tr>
+            </table>
+            <div class="pagination-wrapper">
+              <div class="pagination">
+                <a href="#"><img class="arrow-icon" src="images/icons/arrow-left.svg" alt="arrow left"/></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#"><img class="arrow-icon" src="images/icons/arrow-right.svg" alt="arrow right"/></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="main__section" id="banners">
-        <h3 class="h3-title">Banners</h3>
-        <span class="main__lines"></span>
-        <div class="main__banners-section">
-          <button class="btn-main" type="submit">+add new</button>
-          <div class="main__links">
-            <div class="links-wrapper">
-              <table>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Banner main</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.website.com/bannermain.gif</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Sign up banner</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.website.com/signup.gif</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Banner left side</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.website.com/leftside.gif</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Vertical banner</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.website.com/vert.gif</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Front banner</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.website.com/front.gif</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-                <tr class="table-links">
-                  <td><h4 class="h2-title page-name">Horizontal banner</h4></td>
-                  <td><a href="#" class="h4-title main__url">http://www.website.com/Horizontal.gif</a></td>
-                  <td><img class="icon-trash" src="images/icons/trash.svg" alt="icon trash"/><img class="icon-link" src="images/icons/links.svg" alt="icon link"/></td>
-                </tr>
-              </table>
-              <button class="btn-main" type="submit">+add new</button>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="overlay" id="overlay">
 
-      <div class="main__section" id="personal-data">
-        <h3 class="h3-title">Personal data</h3>
-        <span class="main__lines"></span>
-        <div class="main__personal-data-section">
-          <form class="main__form-wrapper" method="POST">
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Name</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="text" id="fname" name="Name" value="Leonardo" required>
-              </div>
-            </div>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Surname</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="text" id="lname" name="Surname" value="Dicaprio" required>
-              </div>
-            </div>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">E-mail</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="email" id="email" name="E-mail" value="leo@gmail.com" required>
-              </div>
-            </div>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Phone number</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="tel" id="tel" name="Phone number" value="+1 432 555 00 44">
-              </div>
-            </div>
-            <span class="main__lines form-lines"></span>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Skype</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="text" id="skype" name="Skype" value="Leonardo.D">
-              </div>
-            </div>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">ICQ</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="text" id="icq" name="ICQ">
-              </div>
-            </div>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Msn</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="text" id="msn" name="Msn">
-              </div>
-            </div>
-            <span class="main__lines form-lines"></span>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Wallet</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="text" id="wallet" name="Wallet">
-              </div>
-            </div>
-            <span class="main__lines form-lines"></span>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Password</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="password" id="password" name="Password" required>
-              </div>
-            </div>
-            <div class="form">
-              <div class="form-label">
-                <label class="h2-title">Repeat</label>
-              </div>
-              <div class="form-input">
-                <input class="paragraph main__border-form" type="password" id="password-repeat" name="Repeat" required>
-              </div>
-            </div>
-            <span class="main__lines"></span>
-            <button class="btn-main" type="submit">Save</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="main__section" id="payout">
-        <h3 class="h3-title">Payout history</h3>
-        <span class="main__lines"></span>
-        <div class="main__section-wrapper">
-          <div class="calendar-row">
-            <div class="calendar-wrapper">
-              <input class="calendar-field" id="date-start-payout" name="date-start" value="2021-01-20" type="text">
-              <span class="vertical-line"></span>
-              <input class="calendar-field" type="date" id="date-stop-payout" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
-            </div>
-            <button class="btn-refresh">
-              <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
-            </button>
-          </div>
-        </div>
-        <span class="main__lines line-diagram"></span>
-        <div class="scroll-wrapper">
-          <table>
-            <tr>
-              <th>
-                <select class="checkbox-date" name="date">
-                  <option>Date</option>
-                  <option>Date</option>
-                  <option>Date</option>
-                  <option>Date</option>
-                  <option>Date</option>
-                </select>
-              </th>
-              <th class="h2-title">Amount ($)</th>
-              <th class="h2-title">Deal</th>
-              <th class="h2-title">Account</th>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">17/08/02 (12:58)</td>
-              <td class="paragraph">34,425.00</td>
-              <td class="paragraph">cpl (200)</td>
-              <td class="paragraph">bank</td>
-            </tr>
-          </table>
-          <div class="pagination-wrapper">
-            <div class="pagination">
-              <a href="#"><img class="arrow-icon" src="images/icons/arrow-left.svg" alt="arrow left"/></a>
-              <a href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#"><img class="arrow-icon" src="images/icons/arrow-right.svg" alt="arrow right"/></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="main__section" id="details">
-        <h3 class="h3-title">Detail statistic</h3>
-        <span class="main__lines"></span>
-        <div class="main__section-wrapper">
-          <div class="calendar-row">
-            <div class="calendar-wrapper">
-              <input class="calendar-field" id="date-start-detail" name="date-start-detail" value="2021-01-20" type="text">
-              <span class="vertical-line"></span>
-              <input class="calendar-field" type="date" id="date-stop-detail" name="date-stop-detail" value="2021-01-21" min="2021-01-21" max="2022-01-01">
-            </div>
-            <button class="btn-refresh">
-              <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
-            </button>
-          </div>
-        </div>
-        <span class="main__lines line-diagram"></span>
-        <div class="scroll-wrapper">
-          <table>
-            <tr>
-              <th class="h2-title">Tracker name</th>
-              <th class="h2-title">Initiated date</th>
-              <th class="h2-title">Visits</th>
-              <th class="h2-title">Unique</th>
-              <th class="h2-title">Signups</th>
-              <th class="h2-title">FTD</th>
-              <th class="h2-title">Depositors</th>
-              <th>
-                <select class="checkbox-deposits" name="date">
-                  <option>Deposits ($)</option>
-                </select>
-              </th>
-              <th class="h2-title">Payout ($)</th>
-              <th class="h2-title">Turnover</th>
-              <th class="h2-title">Deal</th>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-            <tr class="table-body">
-              <td class="paragraph ">aff/sam_test</td>
-              <td class="paragraph">17/08/02 (12:58)</td>
-              <td class="paragraph">232</td>
-              <td class="paragraph">114</td>
-              <td class="paragraph">12</td>
-              <td class="paragraph">6</td>
-              <td class="paragraph">3</td>
-              <td class="paragraph">29,436.00</td>
-              <td class="paragraph">941.00</td>
-              <td class="paragraph">784,435.00</td>
-              <td class="paragraph">cpl (200)</td>
-            </tr>
-          </table>
-          <div class="pagination-wrapper">
-            <div class="pagination">
-              <a href="#"><img class="arrow-icon" src="images/icons/arrow-left.svg" alt="arrow left"/></a>
-              <a href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#"><img class="arrow-icon" src="images/icons/arrow-right.svg" alt="arrow right"/></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="overlay" id="overlay">
-
-        <div class="modal" id="modal-chat">
-          <div class="modal-wrapper">
-            <div class="btn-close js--close-modal">x</div>
-            <h3 class="h3-title">Online chat with your personal manager</h3>
-            <span class="main__lines"></span>
-            <div class="main__section-wrapper">
-              <div class="modal__manager-profile">
-                <img class="manager-image" src="images/photos/profilephoto.png" alt="Profile photo"/>
-                <div class="manager-data">
-                  <h2 class="modal-title">Mikhael E.</h2>
-                  <span class="label-success paragraph">online</span>
+          <div class="modal" id="modal-chat">
+            <div class="modal-wrapper">
+              <div class="btn-close js--close-modal">x</div>
+              <h3 class="h3-title">Online chat with your personal manager</h3>
+              <span class="main__lines"></span>
+              <div class="main__section-wrapper">
+                <div class="modal__manager-profile">
+                  <img class="manager-image" src="images/photos/profilephoto.png" alt="Profile photo"/>
+                  <div class="manager-data">
+                    <h2 class="modal-title">Mikhael E.</h2>
+                    <span class="label-success paragraph">online</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <span class="main__lines"></span>
-            <div class="blockquote-wrapper">
-              <blockquote class="blockquote blockquote-manager">
-                <p class="paragraph">Hello. Can I help you?</p>
-              </blockquote>
-              <blockquote class="blockquote blockquote-user">
-                <p class="paragraph">Hello! I would like to know about Postback.</p>
-              </blockquote>
-              <blockquote class="blockquote blockquote-manager">
-                <p class="paragraph">Ok. 5 min...</p>
-              </blockquote>
-            </div>
-            <span class="main__lines"></span>
-            <div class="modal-form">
-              <div class="input-container">
-                <input class="paragraph main__border-form form-message" type="email" id="message" name="message" placeholder="Enter the message...">
-                <img class="form-icon" src="images/icons/message.svg" alt="message icon"/>
+              <span class="main__lines"></span>
+              <div class="blockquote-wrapper">
+                <blockquote class="blockquote blockquote-manager">
+                  <p class="paragraph">Hello. Can I help you?</p>
+                </blockquote>
+                <blockquote class="blockquote blockquote-user">
+                  <p class="paragraph">Hello! I would like to know about Postback.</p>
+                </blockquote>
+                <blockquote class="blockquote blockquote-manager">
+                  <p class="paragraph">Ok. 5 min...</p>
+                </blockquote>
               </div>
-              <button class="btn-main js--close-modal" type="submit">Send</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" id="modal-quit">
-          <div class="modal-wrapper">
-            <div class="btn-close js--close-modal">x</div>
-            <h3 class="h3-title">Do you really want to Quit?</h3>
-            <span class="main__lines"></span>
-            <div class="buttons-wrapper">
-              <button class="btn-main-gray js--close-modal" type="submit">Cancel</button>
-              <button class="btn-main js--close-modal" type="submit">Quit</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" id="modal-login">
-          <div class="modal-wrapper">
-            <div class="btn-close js--close-modal">x</div>
-            <h3 class="h3-title">Login</h3>
-            <span class="main__lines"></span>
-            <div>
+              <span class="main__lines"></span>
               <div class="modal-form">
                 <div class="input-container">
-                  <input class="paragraph main__border-form form-message" type="text" id="login" name="Login" placeholder="login name">
-                  <img class="form-icon" src="images/icons/login.svg" alt="login icon"/>
+                  <input class="paragraph main__border-form form-message" type="email" id="message" name="message" placeholder="Enter the message...">
+                  <img class="form-icon" src="images/icons/message.svg" alt="message icon"/>
                 </div>
-                <div class="input-container">
-                  <input class="paragraph main__border-form form-message" type="password" id="password-login" name="Password" placeholder="password">
-                  <img class="form-icon password-icon" src="images/icons/password.svg" alt="password icon"/>
+                <button class="btn-main js--close-modal" type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" id="modal-quit">
+            <div class="modal-wrapper">
+              <div class="btn-close js--close-modal">x</div>
+              <h3 class="h3-title">Do you really want to Quit?</h3>
+              <span class="main__lines"></span>
+              <div class="buttons-wrapper">
+                <button class="btn-main-gray js--close-modal" type="submit">Cancel</button>
+                <button class="btn-main js--close-modal" type="submit">Quit</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" id="modal-login">
+            <div class="modal-wrapper">
+              <div class="btn-close js--close-modal">x</div>
+              <h3 class="h3-title">Login</h3>
+              <span class="main__lines"></span>
+              <div>
+                <div class="modal-form">
+                  <div class="input-container login-element">
+                    <input class="paragraph main__border-form form-message" type="text" id="login" name="Login" placeholder="login name">
+                    <img class="form-icon" src="images/icons/login.svg" alt="login icon"/>
+                  </div>
+                  <div class="input-container login-element">
+                    <input class="paragraph main__border-form form-message" type="password" id="password-login" name="Password" placeholder="password">
+                    <img class="form-icon password-icon" src="images/icons/password.svg" alt="password icon"/>
+                  </div>
+                  <div class="login-element">
+                    <button class="btn-main js--close-modal" type="submit">Enter</button>
+                  </div>
                 </div>
-                  <button class="btn-main js--close-modal" type="submit">Enter</button>
               </div>
             </div>
           </div>
 
         </div>
       </div>
+
+
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>

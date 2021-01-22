@@ -1,22 +1,23 @@
 /* Links */
 .links-wrapper {
-  margin: 0 200px;
+  margin: 0 150px;
+  overflow-x: auto;
+
+  .h2-title {
+    white-space: nowrap;
+  }
 
   .table-links {
     width: 100%;
 
-    .main__url {
-      color: #56819f;
-      text-decoration: none;
-      padding-left: 100px;
-    }
-
     .icon-link {
       filter: $filter-orange;
       width: 25px;
-      margin-right: 25px;
+      margin-right: 30px;
+      // margin-top: -15px;
       opacity: 0;
       float: right;
+      cursor: pointer;
     }
 
     .icon-trash {
@@ -25,6 +26,13 @@
       margin-top: -6px;
       opacity: 0;
       float: right;
+      cursor: pointer;
+    }
+
+    .main__url {
+      color: #56819f;
+      text-decoration: none;
+      padding-left: 70px;
     }
 
     &:hover {
@@ -34,13 +42,11 @@
       .icon-link {
         opacity: 1;
         transition: $transition;
-        cursor: pointer;
       }
 
       .icon-trash {
         opacity: 1;
         transition: $transition;
-        cursor: pointer;
       }
     }
 
@@ -48,5 +54,11 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+  }
+}
+
+@media(max-width: 767px) {
+  .links-wrapper {
+    margin: 0;
   }
 }

@@ -32,3 +32,20 @@
     }
   }
 }
+
+@media(max-width: 767px) {
+  .main__form-wrapper {
+    // display: block;
+  }
+
+  .main__lines, .form-lines {
+    display: none;
+    width: 50%;
+  }
+
+  .form-label {
+    margin: 0 0 10px -120px;
+    white-space: nowrap;
+
+  }
+}
