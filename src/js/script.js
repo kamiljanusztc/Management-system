@@ -3,6 +3,10 @@
 
 const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
+const home = document.querySelector('.home');
+
+const hamburgerMobile = document.querySelector('.hamburger-mobile');
+const navbarMobile = document.querySelector('.navbar__options');
 
 const modalChat = document.querySelector('.sidebar__profile-manager');
 const modalLogin = document.querySelector('.login');
@@ -12,37 +16,52 @@ const navMobile = document.querySelector('.hamburger-mobile');
 const navOptions = document.querySelector('.navbar__options');
 
 const pageLinks = document.querySelectorAll('.pages a');
-// const mainSection = document.getElementById('.main__section');
-// const linkId = pageLinks.getAttribute('href');
-const pageId = document.getElementById('links');
 
-// Page links
 for (let pageLink of pageLinks) {
   pageLink.addEventListener('click', function (e) {
     e.preventDefault();
     console.log('link clicked');
+
     const clickedElement = this;
+    const clickedHref = clickedElement.getAttribute('href');
+    clickedElement.parentElement.classList.add('active-link');
 
-    pageId.classList.remove('hidden');
-
-    const linkId = pageLink.getAttribute('href');
-
-    // if (linkId == pageId) {
-    //   pageId.classList.add('active');
-    //   console.log('active class added');
+    // if (clickedElement.parentElement.classList.contains('active-link')) {
+    //   // clickedElement.parentElement.classList.toggle('active-link');
     // }
 
-    if (linkId == '#' + pageId) {
-      pageId.classList.add('active');
-      console.log('add active class');
+    const activePages = document.querySelectorAll('.main__section.active');
+    for (let activePage of activePages) {
+      activePage.classList.remove('active');
     }
+
+    const targetPage = document.querySelector(clickedHref);
+    targetPage.classList.add('active');
+    navbarMobile.classList.add('hide-menu');
+
+    // const activeLinks = document.querySelectorAll(clickedElement.parentElement);
+    // for (let activeLink of activeLinks) {
+    //   activeLink.classList.add{'active'};
+    // }
 
   });
 }
 
+// Home button
+home.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('general').classList.add('active');
+});
+
+// Menu mobile
+hamburgerMobile.addEventListener('click', function(e) {
+  e.preventDefault();
+  navbarMobile.classList.toggle('hide-menu');
+});
+
 // Menu
 function toggleMenu(visible) {
-  sidebar.classList.toggle('show', visible);
+  sidebar.classList.toggle('hide', visible);
 }
 
 hamburger.addEventListener('click', function(e) {
@@ -84,6 +103,7 @@ function openModal(modal) {
   });
   document.querySelector('#overlay').classList.add('show');
   document.querySelector(modal).classList.add('show');
+  console.log('open modal');
 }
 
 // Modal chat

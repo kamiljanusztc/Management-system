@@ -86,3 +86,10 @@ th {
   }
 }
 
+@media(max-width: 767px) {
+  .pagination a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+

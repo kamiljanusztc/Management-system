@@ -75,6 +75,7 @@
         font-size: 14px;
         font-weight: $font-light;
         padding: 10px 0 10px 15px;
+        width: 100%;
       }
 
       img {
@@ -131,7 +132,7 @@
   }
 }
 
-.sidebar.show {
+.sidebar.hide {
   // transform: translateX(-140px);
   width: 50px;
 
@@ -142,9 +143,4 @@
   .hamburger {
     margin: 0;
   }
-}
-
-.sidebar.show ~ .main {
-  transition: transform 0.3s ease-in-out;
-  margin-left: 40px;
 }

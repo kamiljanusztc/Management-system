@@ -172,3 +172,47 @@
     padding-bottom: 10px;
   }
 }
+
+@media(max-width: 767px) {
+  .modal {
+    width: 90%;
+    height: auto;
+
+    .modal-form {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      .input-container {
+        margin: 0;
+        width: auto;
+      }
+
+      .form-message {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .btn-main {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .blockquote-user {
+      display: block;
+      // padding: 0;
+      // margin: 10px 0 20px 0;
+      // width: auto;
+      // margin-bottom: -10px;
+      // background-size: cover;
+
+      p {
+        color: $box-color;
+        padding-top: 5px;
+        // padding: 0 0 10px 10px;
+      }
+    }
+  }
+}

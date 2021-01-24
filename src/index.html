@@ -17,7 +17,7 @@
     <div class="navbar__wrapper row">
 
       <div class="navbar__main col-sm-12">
-        <img class="navbar__logo" src="images/photos/logo.png" alt="Just do it logo"/>
+        <img class="navbar__logo home" src="images/photos/logo.png" alt="Just do it logo"/>
         <a href="#notification"><img class="navbar__icon" src="images/icons/notification.svg" alt="notification"/><span class="navbar__notification"></span></a>
         <div class="hamburger-mobile">
           <span></span>
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="navbar__options col-sm-12">
+      <div class="navbar__options hide-menu col-sm-12">
         <ul class="pages">
           <li><a href="#general"><img class="navbar__icon" src="images/icons/general.svg" alt="General"/>General</a></li>
           <li><a href="#details"><img class="navbar__icon" src="images/icons/details.svg" alt="Details"/>Details</a></li>
@@ -35,20 +35,20 @@
           <li><a href="#personal-data"><img class="navbar__icon" src="images/icons/personaldata.svg" alt="Personal data"/>Personal date</a></li>
           <li><a href="#payout"><img class="navbar__icon" src="images/icons/payout.svg" alt="Payout"/>Payout</a></li>
           <li><a href="#postback"><img class="navbar__icon" src="images/icons/postback.svg" alt="Postback"/>Postback</a></li>
-          <li><a href="#manager"><img class="navbar__icon" src="images/icons/message.svg" alt="Manager"/>Your Manager</a></li>
-          <li><a href="#manager"><img class="navbar__icon" src="images/icons/wallet.svg" alt="Manager"/>Wallet</a><img class="navbar__icon-dropdown" src="images/icons/arrow-down.svg" alt="Manager"/></li>
-          <li><a href="#manager"><img class="navbar__icon" src="images/icons/profile.svg" alt="Manager"/>Your Account</a></li>
-          <li class="quit"><a href="#quit"><img class="navbar__icon" src="images/icons/quit.svg" alt="Manager"/>Log out</a></li>
+          <li class="sidebar__profile-manager"><a href="#manager"><img class="navbar__icon" src="images/icons/message.svg" alt="Manager"/>Your Manager</a></li>
+          <li><a href="#wallet"><img class="navbar__icon" src="images/icons/wallet.svg" alt="Wallet"/>Wallet</a><img class="navbar__icon-dropdown" src="images/icons/arrow-down.svg" alt="Manager"/></li>
+          <li class="login"><a href="#account"><img class="navbar__icon" src="images/icons/profile.svg" alt="Account"/>Your Account</a></li>
+          <li class="quit quit-option"><a href="#quit"><img class="navbar__icon" src="images/icons/quit.svg" alt="Manager"/>Log out</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="sidebar show">
+  <div class="container main-container">
+    <div class="sidebar hide">
       <div class="sidebar__wrapper">
         <div class="sidebar__nav">
-          <img class="sidebar__logo" src="images/photos/logo.png" alt="Just do it logo"/>
+          <img class="sidebar__logo home" src="images/photos/logo.png" alt="Just do it logo"/>
           <div class="hamburger">
             <span></span>
             <span></span>
@@ -76,9 +76,9 @@
       </div>
     </div>
 
-    <div class="topbar__section container">
+    <div class="topbar__section">
       <div class="topbar">
-        <div class="topbar__container container">
+        <div class="topbar__container">
           <div class="topbar__nav quit-option">
             <img class="topbar__icon" src="images/icons/quit.svg" alt="quit"/>
           </div>
@@ -107,9 +107,9 @@
             <div class="main__section-wrapper">
               <div class="calendar-row">
                 <div class="calendar-wrapper">
-                  <input class="calendar-field" id="date-start" name="date-start" value="2021-01-20" type="text" >
+                  <input class="calendar-field" type="date" id="date-start" name="date-start" value="2021-01-21" min="2021-01-21" max="2022-01-01">
                   <span class="vertical-line"></span>
-                  <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                  <input class="calendar-field" type="date" id="date-stop" name="date-stop" value="2021-01-22" min="2021-01-22" max="2022-01-01">
                 </div>
                 <button class="btn-refresh">
                   <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
@@ -356,9 +356,9 @@
           <div class="main__section-wrapper">
             <div class="calendar-row">
               <div class="calendar-wrapper">
-                <input class="calendar-field" id="date-start-payout" name="date-start" value="2021-01-20" type="text">
+                <input class="calendar-field" type="date" id="date-start-payout" name="date-start" value="2021-01-21" min="2021-01-21" max="2022-01-01">
                 <span class="vertical-line"></span>
-                <input class="calendar-field" type="date" id="date-stop-payout" name="date-stop" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                <input class="calendar-field" type="date" id="date-stop-payout" name="date-stop" value="2021-01-22" min="2021-01-22" max="2022-01-01">
               </div>
               <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>
@@ -455,9 +455,9 @@
           <div class="main__section-wrapper">
             <div class="calendar-row">
               <div class="calendar-wrapper">
-                <input class="calendar-field" id="date-start-detail" name="date-start-detail" value="2021-01-20" type="text">
+                <input class="calendar-field" type="date" id="date-start-statistics" name="date-start" value="2021-01-21" min="2021-01-21" max="2022-01-01">
                 <span class="vertical-line"></span>
-                <input class="calendar-field" type="date" id="date-stop-detail" name="date-stop-detail" value="2021-01-21" min="2021-01-21" max="2022-01-01">
+                <input class="calendar-field" type="date" id="date-stop-statistics" name="date-stop" value="2021-01-22" min="2021-01-22" max="2022-01-01">
               </div>
               <button class="btn-refresh">
                 <img class="refresh-icon" src="images/icons/refresh.svg" alt="button refresh"/>

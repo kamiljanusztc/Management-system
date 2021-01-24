@@ -1,3 +1,4 @@
+
 /* Calendar */
 .calendar-row {
   display: flex;
@@ -18,7 +19,7 @@
     .vertical-line {
       border-left: 2px solid #e3e3e3;
       height: 28px;
-      margin: 20px 20px 20px -40px;
+      margin: 20px;
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
@@ -95,19 +96,18 @@
   }
 }
 
-#details, #links, #banners, #personal-data, #payout, #postback {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
 @media(max-width: 767px) {
+  .h3-title {
+    text-align: center;
+  }
+
   .calendar-row {
+    margin-bottom: 20px;
+
     .calendar-wrapper {
       margin-right: 20px;
-      padding: 7px 5px 5px 10px;
+      padding: 7px 5px 5px 30px;
+      // padding: 0;
       border-radius: $border-radius;
       border: 1px solid #e3e3e3;
 
@@ -125,15 +125,43 @@
         background-position: 100% center;
         cursor: pointer;
         filter: $filter-gray;
-        // margin-top: -30px;
-        margin: -30px 0 0 100px;
+        padding: 5px 30px 5px 20px;
         display: inline;
       }
     }
 
     .btn-refresh {
-      // margin: 20px auto;
+      height: 40px;
+      width: 80px;
+    }
+  }
+
+  .line-diagram {
+    margin-top: 0;
+  }
+
+  .main__diagram {
+    margin: 0;
+
+    .main__row {
+      display: block;
+    }
+  }
+
+  .diagram {
+    position: relative;
+    width: 100%;
+    // margin: 20px;
+    // margin: 0 auto;
+
+    .h2-title  {
+      text-align: center;
+      margin-top: 40px;
       margin-left: 0;
+    }
+
+    #myChart{
+      margin-top: 20px;
     }
   }
 }
