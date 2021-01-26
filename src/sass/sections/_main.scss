@@ -106,7 +106,8 @@
 
     .calendar-wrapper {
       margin-right: 20px;
-      padding: 7px 5px 5px 30px;
+      margin: 0;
+      padding: 10px 0 0 40px;
       // padding: 0;
       border-radius: $border-radius;
       border: 1px solid #e3e3e3;
@@ -133,6 +134,7 @@
     .btn-refresh {
       height: 40px;
       width: 80px;
+      margin-left: 30px;
     }
   }
 

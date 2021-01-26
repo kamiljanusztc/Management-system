@@ -201,18 +201,9 @@
     }
 
     .blockquote-user {
-      display: block;
-      // padding: 0;
-      // margin: 10px 0 20px 0;
-      // width: auto;
-      // margin-bottom: -10px;
-      // background-size: cover;
-
-      p {
-        color: $box-color;
-        padding-top: 5px;
-        // padding: 0 0 10px 10px;
-      }
+      background-position-x: right;
+      padding: 0 0 10px 10px;
+      background-size: cover;
     }
   }
 }

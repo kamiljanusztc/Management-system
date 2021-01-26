@@ -54,3 +54,19 @@
     margin-top: 15px;
   }
 }
+
+@media(max-width: 768px) {
+  .main__form-wrapper .form .main__border-form {
+    margin: 10px 0 0 0;
+  }
+
+  .main__form-wrapper .form .h2-title {
+    float: none;
+    margin: 0;
+  }
+
+  .main__form-wrapper .form .form-label {
+    float: none;
+    width: auto;
+  }
+}
