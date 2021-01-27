@@ -8,17 +8,12 @@ const home = document.querySelector('.home');
 const hamburgerMobile = document.querySelector('.hamburger-mobile');
 const navbarMobile = document.querySelector('.navbar__options');
 
-const modalChat = document.querySelector('.sidebar__profile-manager');
-const modalLogin = document.querySelector('.login');
-const modalQuit = document.querySelector('.quit-option');
-const modalQuitMobile = document.querySelector('.quit-mobile');
-const modalLoginMobile = document.querySelector('.login-mobile');
-const modalChatMobile = document.querySelector('.chat-mobile');
-
 const navMobile = document.querySelector('.hamburger-mobile');
 const navOptions = document.querySelector('.navbar__options');
 
-const pageLinks = document.querySelectorAll('.pages a');
+const pageLinks = document.querySelectorAll('.pages .page-link');
+
+const modalLinks = document.querySelectorAll('.modalLink');
 
 // Page Links
 for (let pageLink of pageLinks) {
@@ -116,46 +111,21 @@ function openModal(modal) {
   console.log('open modal');
 }
 
-// Modal chat
-modalChat.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal('#modal-chat');
-});
+// Modal links
+for (let modalLink of modalLinks) {
+  modalLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('modal found');
 
-modalChatMobile.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal('#modal-chat');
-});
-
-// Modal login
-modalLogin.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal('#modal-login');
-});
-
-modalLoginMobile.addEventListener('click', function (e) {
-  e.preventDefault();
-  openModal('#modal-login');
-});
-
-// Modal quit
-modalQuit.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log('modal quit clicked');
-  openModal('#modal-quit');
-});
-
-modalQuitMobile.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log('modal quit clicked');
-  openModal('#modal-quit');
-});
-
-// Navigation mobile
-navMobile.addEventListener('click', function (e) {
-  e.preventDefault();
-  navOptions.classList.toggle('hidden');
-});
+    if (modalLink.classList.contains('chat')) {
+      openModal('#modal-chat');
+    } else if (modalLink.classList.contains('quit-option')) {
+      openModal('#modal-quit');
+    } else if (modalLink.classList.contains('login')) {
+      openModal('#modal-login');
+    }
+  });
+}
 
 // Diagram
 var ctx = document.getElementById('myChart').getContext('2d');
